@@ -15,6 +15,7 @@
 
 ###
 
+
 ## Я начинающий Data Engineer
 - 💪 Мне нравится писать код
 - 🌱 Я постоянно учусь чему-то новому
@@ -28,7 +29,7 @@
 
 ###
 
-## Contact
+## Как со мной можно связаться
 
 [<img src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg" alt="Instagram" align="left" height="22px">][instagram]
 [<img src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/telegram.svg" alt="Twitch" align="left" height="22px" >][telegram]
@@ -36,30 +37,34 @@
 
 ### Языки 
 
-<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png" alt="HTML" align="left" height="30px" style="padding: 5px;" title="HTML">
-<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png" alt="CSS" align="left" height="30px" style="padding: 5px;" title="CSS">
-<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png" alt="Python" align="left" height="30px" style="padding: 5px;" title="Python">
-<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/sql/sql.png" alt="SQL" align="left" height="30px" style="padding: 5px;" title="SQL">
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="HTML" align="left" height="30px" style="padding: 5px;" title="HTML">
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="CSS" align="left" height="30px" style="padding: 5px;" title="CSS">
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="Python" align="left" height="30px" style="padding: 5px;" title="Python">
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg" alt="SQL" align="left" height="30px" style="padding: 5px;" title="SQL">
+
 
 <br />
 
 ### Инструменты
 
-<img src="https://visualstudio.microsoft.com/wp-content/uploads/2019/06/BrandVisualStudioWin2019-3.svg" alt="Visual Studio" align="left" height="30px" style="padding: 5px;">
-<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/visual-studio-code/visual-studio-code.png" alt="Visual Code" align="left" height="30px" style="padding: 5px;">
-<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png" alt="Git" align="left" height="30px" style="padding: 5px;">
-<img src="https://raw.githubusercontent.com/github/explore/89bdd9644f44d1b12180fd512b95574fe4c54617/topics/github-api/github-api.png" alt="GitHub" align="left" height="30px" style="padding: 5px;">
+<img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/ApacheSpark.svg" alt="Apache" align="left" height="30px" style="padding: 5px;" title="Apache Spark">
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/airflow/airflow-original.svg" alt="Airflow" align="left" height="30px" style="padding: 5px;" title="Airflow">
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" align="left" height="30px" style="padding: 5px;" title="PostgreSQL">
+<img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/Clickhouse.svg" alt="ClickHouse" align="left" height="30px" style="padding: 5px;" title="ClickHouse">
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" alt="Git" align="left" height="30px" style="padding: 5px;" title="Git">
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg" alt="GitHub" align="left" height="30px" style="padding: 5px;" title="GitHub">
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original.svg" alt="Amazon S3" align="left" height="30px" style="padding: 5px;" title="Amazon S3">
 
 <br />
 
-### Platforms
+###
 
-<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/linux/linux.png" alt="Linux" align="left" height="30px" style="padding: 5px;">
-<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/windows/windows.png" alt="Windows" align="left" height="30px" style="padding: 5px;">
-<img src="https://raw.githubusercontent.com/github/explore/fbceb94436312b6dacde68d122a5b9c7d11f9524/topics/aws/aws.png" alt="AWS"
-align="left" height="30px" style="padding: 5px;">
-<br />
-
-## Stats
-
-[![My github stats](https://github-readme-stats.vercel.app/api?username=Vlasov-S-N-96)](https://github.com/anuraghazra/github-readme-stats)
+<details>
+  <summary>Статистика</summary>
+    <a href="https://github.com/anuraghazra/github-readme-stats">
+        <img align="left" width="400" style="margin-right: 10px; margin-bottom: 10px;" alt="Top Languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Vlasov-S-N-96&langs_count=8&layout=compact" />
+    </a>
+    <a href="https://github.com/anuraghazra/github-readme-stats">
+        <img align="left" width = "400" style="margin-right: 10px; margin-bottom: 10px;" alt="GitHub Stats" src="https://github-readme-stats.vercel.app/api?username=Vlasov-S-N-96&show_icons=true" />
+    </a>
+</details>
