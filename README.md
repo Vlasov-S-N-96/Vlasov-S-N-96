@@ -31,7 +31,7 @@
 
 ###
 
-## Контакты
+*** Контакты ***
 
 [<img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/icons/telegram.svg" alt="Telegram" align="left" height="22px" >][telegram]
 [<img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/icons/vk.svg" alt="VK" align="left" height="22px">][vk]
