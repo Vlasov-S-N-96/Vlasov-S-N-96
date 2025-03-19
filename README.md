@@ -1,5 +1,5 @@
 <!-- Links -->
-[telegram]: @Vlasov_S_Nid96271
+[telegram]: https://t.me/@Vlasov_S_Nid96271
 [vk]: https://vk.com/171254467
 [mailru]: mailto:nikolaevch96@yandex.ru
 [whatsapp]: https://wa.me/79525402041
