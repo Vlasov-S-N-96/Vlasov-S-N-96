@@ -47,7 +47,7 @@
 
 ### Инструменты
 
-<img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/icons/ApacheSpark.svg" alt="Apache" align="left" height="30px" style="padding: 5px;" title="Apache Spark">
+<img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/icons/ApacheSpark.svg" alt="Apache" align="left" height="30px" style="padding: 5px;" title="Apache Spark">
 <img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/icons/airflow.svg" alt="Airflow" align="left" height="30px" style="padding: 5px;" title="Airflow">
 <img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/icons/postgresql.svg" alt="PostgreSQL" align="left" height="30px" style="padding: 5px;" title="PostgreSQL">
 <img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/icons/Clickhouse.svg" alt="ClickHouse" align="left" height="30px" style="padding: 5px;" title="ClickHouse">
