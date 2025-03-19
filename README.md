@@ -1,6 +1,8 @@
 <!-- Links -->
-[instagram]: https://www.instagram.com/
 [telegram]: @Vlasov_S_Nid96271
+[vk]: https://vk.com/171254467
+[mailru]: mailto:nikolaevch96@yandex.ru
+[whatsapp]: https://wa.me/79525402041
 <!-- End links -->
 
 <br clear="both">
@@ -31,8 +33,10 @@
 
 ## Как со мной можно связаться
 
-[<img src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg" alt="Instagram" align="left" height="22px">][instagram]
-[<img src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/telegram.svg" alt="Twitch" align="left" height="22px" >][telegram]
+[<img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/icons/telegram.svg" alt="Telegram" align="left" height="22px" >][telegram]
+[<img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/icons/vk.svg" alt="VK" align="left" height="22px">][vk]
+[<img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/icons/mail.svg" alt="Mail.ru" align="left" height="22px">][mailru]
+[<img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/icons/whatsapp.svg" alt="WhatsApp" align="left" height="22px">][whatsapp]
 <br />
 
 ### Языки 
