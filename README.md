@@ -47,13 +47,13 @@
 
 ### Инструменты
 
-<img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/ApacheSpark.svg" alt="Apache" align="left" height="30px" style="padding: 5px;" title="Apache Spark">
-<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/airflow/airflow-original.svg" alt="Airflow" align="left" height="30px" style="padding: 5px;" title="Airflow">
-<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" align="left" height="30px" style="padding: 5px;" title="PostgreSQL">
-<img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/Clickhouse.svg" alt="ClickHouse" align="left" height="30px" style="padding: 5px;" title="ClickHouse">
-<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" alt="Git" align="left" height="30px" style="padding: 5px;" title="Git">
-<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg" alt="GitHub" align="left" height="30px" style="padding: 5px;" title="GitHub">
-<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original.svg" alt="Amazon S3" align="left" height="30px" style="padding: 5px;" title="Amazon S3">
+<img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/icons/ApacheSpark.svg" alt="Apache" align="left" height="30px" style="padding: 5px;" title="Apache Spark">
+<img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/icons/airflow.svg" alt="Airflow" align="left" height="30px" style="padding: 5px;" title="Airflow">
+<img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/icons/postgresql.svg" alt="PostgreSQL" align="left" height="30px" style="padding: 5px;" title="PostgreSQL">
+<img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/icons/Clickhouse.svg" alt="ClickHouse" align="left" height="30px" style="padding: 5px;" title="ClickHouse">
+<img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/icons/git.png" alt="Git" align="left" height="30px" style="padding: 5px;" title="Git">
+<img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/icons/github.svg" alt="GitHub" align="left" height="30px" style="padding: 5px;" title="GitHub">
+<img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/icons/amazon-s3.png" alt="Amazon S3" align="left" height="30px" style="padding: 5px;" title="Amazon S3">
 
 <br />
 
