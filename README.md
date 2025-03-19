@@ -31,7 +31,7 @@
 
 ###
 
-## Как со мной можно связаться
+## Контакты
 
 [<img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/icons/telegram.svg" alt="Telegram" align="left" height="22px" >][telegram]
 [<img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/icons/vk.svg" alt="VK" align="left" height="22px">][vk]
@@ -64,7 +64,7 @@
 ###
 
 <details>
-  <summary style="font-weight: bold;">Статистика</summary>
+  <summary style="font-weight: 900;">Статистика</summary>
     <a href="https://github.com/anuraghazra/github-readme-stats">
         <img align="left" width="400" style="margin-right: 10px; margin-bottom: 10px;" alt="Top Languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Vlasov-S-N-96&langs_count=8&layout=compact" />
     </a>
