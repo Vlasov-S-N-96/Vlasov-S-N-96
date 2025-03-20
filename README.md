@@ -27,7 +27,7 @@
 
 ###
 
-<p align="left">Я начинающий Data Engineer. Мой путь в it начался с прохождения различных бесплатных курсов на stepik.org по sql и python. После чего я успешно окончил курсы Инженер данных с нуля от karpov.courses, где научился работать с различными инструментами для работы с данными и планирую развиваться дальше в этом направлении.</p>
+<p align="left">Мой путь в it начался с прохождения различных бесплатных курсов на stepik.org по sql и python. После чего я успешно окончил курсы Инженер данных с нуля от karpov.courses, где научился работать с различными инструментами для работы с данными и планирую развиваться дальше в этом направлении.</p>
 
 ###
 
@@ -60,6 +60,13 @@
 <img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/icons/amazon-s3.png" alt="Amazon S3" align="left" height="30px" style="padding: 5px;" title="Amazon S3">
 
 <br />
+
+### Сертификаты
+
+<div style="overflow-x: auto; white-space: nowrap;">
+  <img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/certificate/karpov-certificate.jpg" alt="karpov-certificate" style="width: 200px; margin: 5px;">
+  <img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/certificate/stepik-certificate.jpg" alt="stepik-certificate" style="width: 200px; margin: 5px;">
+</div>
 
 ###
 
