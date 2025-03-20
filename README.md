@@ -64,8 +64,8 @@
 ### Сертификаты
 
 <div style="overflow-x: auto; white-space: nowrap;">
-  <img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/certificate/karpov-certificate.jpg" alt="karpov-certificate" style="width: 200px; margin: 5px;">
-  <img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/certificate/stepik-certificate.jpg" alt="stepik-certificate" style="width: 200px; margin: 5px;">
+  <img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/certificate/karpov-certificate.jpg" alt="karpov-certificate" style="width: 400px; margin: 5px;">
+  <img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/certificate/stepik-certificate.jpg" alt="stepik-certificate" style="width: 400px; margin: 5px;">
 </div>
 
 ###
