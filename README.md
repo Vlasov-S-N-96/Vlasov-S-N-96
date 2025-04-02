@@ -65,25 +65,7 @@
 
 <div style="overflow-x: auto; white-space: nowrap;">
   <img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/certificate/karpov-certificate.jpg" alt="karpov-certificate" style="width: 400px; margin: 5px;">
+  <br>
   <img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/certificate/stepik-certificate.jpg" alt="stepik-certificate" style="width: 400px; margin: 5px;">
 </div>
-
 ###
-
-<details>
-  <summary style="font-weight: 900;">Статистика</summary>
-    <a href="https://github.com/anuraghazra/github-readme-stats">
-        <img align="left" width="400" style="margin-right: 10px; margin-bottom: 10px;" alt="Top Languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Vlasov-S-N-96&langs_count=8&layout=compact" />
-    </a>
-    <a href="https://github.com/anuraghazra/github-readme-stats">
-        <img align="left" width = "400" style="margin-right: 10px; margin-bottom: 10px;" alt="GitHub Stats" src="https://github-readme-stats.vercel.app/api?username=Vlasov-S-N-96&show_icons=true" />
-    </a>
-</details>
-
-<details>
-  <summary style="font-weight: 900;">Статистика</summary>
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Vlasov-S-N-96&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=dracula&locale=en&hide_border=false&order=1" height="150" alt="stats graph"  />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=Vlasov-S-N-96&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=dracula&hide_border=false&order=2" height="150" alt="languages graph"  />
-</div>
-</details>
