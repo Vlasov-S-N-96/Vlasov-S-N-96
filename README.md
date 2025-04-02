@@ -63,7 +63,7 @@
 
 ### Сертификаты
 
-<div style="display: flex; overflow-x: auto; gap: 150px;">
+<div style="display: flex; overflow-x: auto; gap: 40px;">
   <img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/certificate/karpov-certificate.jpg" alt="karpov-certificate" style="width: 400px;">
   <img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/certificate/stepik-certificate.jpg" alt="stepik-certificate" style="width: 400px;">
 </div>
