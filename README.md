@@ -66,3 +66,6 @@
   <img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/certificate/stepik-certificate.jpg" alt="stepik-certificate" style="width: 400px;">
 </div>
 
+### Мои проекты
+
+[Посмотреть мои проекты](https://github.com/Vlasov-S-N-96)
