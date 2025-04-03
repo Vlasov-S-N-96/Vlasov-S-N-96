@@ -68,4 +68,4 @@
 
 ### Мои проекты
 
-[Посмотреть мои проекты](https://github.com/Vlasov-S-N-96)
+[Посмотреть мои проекты](https://github.com/Vlasov-S-N-96/project)
