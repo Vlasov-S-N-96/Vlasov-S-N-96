@@ -38,12 +38,10 @@
 
 ### Языки 
 
+<img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/icons/Sql.svg" alt="SQL" align="left" height="30px" style="padding: 5px;" title="SQL">
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="Python" align="left" height="30px" style="padding: 5px;" title="Python">
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="HTML" align="left" height="30px" style="padding: 5px;" title="HTML">
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="CSS" align="left" height="30px" style="padding: 5px;" title="CSS">
-<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="Python" align="left" height="30px" style="padding: 5px;" title="Python">
-<img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/icons/Sql.svg" alt="SQL" align="left" height="30px" style="padding: 5px;" title="SQL">
-
-
 <br />
 
 ### Инструменты
