@@ -25,7 +25,7 @@
 
 ###
 
-<p align="left">Мой путь в IT начался с увлечения анализом данных и автоматизацией задач. Опыт работы системным администратором и углубленное обучение на курсах "Инженер данных с нуля" от karpov.courses дали мне прочный фундамент для развития в сфере Data Engineering.Ищу возможности применить свои знания и навыки в команде, где смогу внести вклад в интересные проекты.</p>
+<p align="left">Мой путь в IT начался с увлечения анализом данных и автоматизацией задач. Опыт работы системным администратором и углубленное обучение на курсах "Инженер данных с нуля" от karpov.courses дали мне прочный фундамент для развития в сфере Data Engineering. Ищу возможности применить свои знания и навыки в команде, где смогу внести вклад в интересные проекты.</p>
 
 ###
 
@@ -63,6 +63,7 @@
   <a href="URL_TO_LARGER_IMAGE_OR_VERIFICATION_PAGE_1">
     <img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/certificate/karpov-certificate.jpg" alt="karpov-certificate" style="width: 400px;">
   </a>
+  <br />
   <a href="URL_TO_LARGER_IMAGE_OR_VERIFICATION_PAGE_2">
     <img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/certificate/stepik-certificate.jpg" alt="stepik-certificate" style="width: 400px;">
   </a>
