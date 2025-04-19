@@ -31,29 +31,29 @@
 
 ### Контакты
 
-[<img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/icons/telegram.svg" alt="Telegram" align="left" height="22px">](https://t.me/Vlasov_S_Nid96271) Telegram
-[<img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/icons/mail.svg" alt="Mail.ru" align="left" height="22px">](mailto:your_email@example.com) Mail.ru (Replace with your email)
-[<img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/icons/whatsapp.svg" alt="WhatsApp" align="left" height="22px">](https://wa.me/79525402041) WhatsApp
+[<img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/icons/telegram.svg" alt="Telegram" align="left" height="22px">](https://t.me/Vlasov_S_Nid96271)
+[<img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/icons/mail.svg" alt="Mail.ru" align="left" height="22px">](mailto:your_email@example.com)
+[<img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/icons/whatsapp.svg" alt="WhatsApp" align="left" height="22px">](https://wa.me/79525402041)
 <br clear="left"/>
 
 ### Языки
 
-<img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/icons/Sql.svg" alt="SQL" align="left" height="30px" style="padding: 5px;" title="SQL"> SQL
-<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="Python" align="left" height="30px" style="padding: 5px;" title="Python"> Python
-<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="HTML" align="left" height="30px" style="padding: 5px;" title="HTML"> HTML
-<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="CSS" align="left" height="30px" style="padding: 5px;" title="CSS"> CSS
+<img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/icons/Sql.svg" alt="SQL" align="left" height="30px" style="padding: 5px;" title="SQL">
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="Python" align="left" height="30px" style="padding: 5px;" title="Python">
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="HTML" align="left" height="30px" style="padding: 5px;" title="HTML">
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="CSS" align="left" height="30px" style="padding: 5px;" title="CSS">
 <br clear="left"/>
 
 ### Инструменты
 
-<img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/icons/ApacheSpark.svg" alt="Apache" align="left" height="30px" style="padding: 5px;" title="Apache Spark"> Apache Spark
-<img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/icons/airflow.svg" alt="Airflow" align="left" height="30px" style="padding: 5px;" title="Airflow"> Airflow
-<img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/icons/postgresql.svg" alt="PostgreSQL" align="left" height="30px" style="padding: 5px;" title="PostgreSQL"> PostgreSQL
-<img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/icons/Clickhouse.svg" alt="ClickHouse" align="left" height="30px" style="padding: 5px;" title="ClickHouse"> ClickHouse
-<img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/icons/jupyter_icon.svg" alt="Jupyter notebook" align="left" height="30px" style="padding: 5px;" title="Jupyter notebook"> Jupyter Notebook
-<img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/icons/git.png" alt="Git" align="left" height="30px" style="padding: 5px;" title="Git"> Git
-<img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/icons/github.svg" alt="GitHub" align="left" height="30px" style="padding: 5px;" title="GitHub"> GitHub
-<img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/icons/amazon-s3.png" alt="Amazon S3" align="left" height="30px" style="padding: 5px;" title="Amazon S3"> Amazon S3
+<img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/icons/ApacheSpark.svg" alt="Apache" align="left" height="30px" style="padding: 5px;" title="Apache Spark">
+<img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/icons/airflow.svg" alt="Airflow" align="left" height="30px" style="padding: 5px;" title="Airflow">
+<img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/icons/postgresql.svg" alt="PostgreSQL" align="left" height="30px" style="padding: 5px;" title="PostgreSQL">
+<img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/icons/Clickhouse.svg" alt="ClickHouse" align="left" height="30px" style="padding: 5px;" title="ClickHouse">
+<img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/icons/jupyter_icon.svg" alt="Jupyter notebook" align="left" height="30px" style="padding: 5px;" title="Jupyter notebook">
+<img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/icons/git.png" alt="Git" align="left" height="30px" style="padding: 5px;" title="Git">
+<img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/icons/github.svg" alt="GitHub" align="left" height="30px" style="padding: 5px;" title="GitHub">
+<img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/icons/amazon-s3.png" alt="Amazon S3" align="left" height="30px" style="padding: 5px;" title="Amazon S3">
 
 <br clear="left"/>
 
