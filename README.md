@@ -63,7 +63,7 @@
   <a href="URL_TO_LARGER_IMAGE_OR_VERIFICATION_PAGE_1">
     <img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/certificate/karpov-certificate.jpg" alt="karpov-certificate" style="width: 400px;">
   </a>
-  <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <a href="URL_TO_LARGER_IMAGE_OR_VERIFICATION_PAGE_2">
     <img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/certificate/stepik-certificate.jpg" alt="stepik-certificate" style="width: 400px;">
   </a>
