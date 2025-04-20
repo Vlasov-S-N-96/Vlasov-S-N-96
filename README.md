@@ -59,15 +59,17 @@
 
 ### Сертификаты
 
-<div style="display: flex; overflow-x: auto; gap: 40px;">
-  <a href="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/certificate/karpov-certificate.jpg">
-    <img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/certificate/karpov-certificate.jpg" alt="karpov-certificate" style="width: 400px;">
-  </a>
-  &nbsp;
-  <a href="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/certificate/stepik-certificate.jpg">
-    <img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/certificate/stepik-certificate.jpg" alt="stepik-certificate" style="width: 400px;">
-  </a>
-</div>
+<details>
+  <summary>Показать сертификаты</summary>
+  <div style="display: flex; overflow-x: auto; gap: 40px;">
+    <a href="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/certificate/karpov-certificate.jpg">
+      <img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/certificate/karpov-certificate.jpg" alt="karpov-certificate" style="width: 400px;">
+    </a>
+    <a href="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/certificate/stepik-certificate.jpg">
+      <img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/certificate/stepik-certificate.jpg" alt="stepik-certificate" style="width: 400px;">
+    </a>
+  </div>
+</details>
 
 <br />
 
