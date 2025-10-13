@@ -68,6 +68,9 @@
     <a href="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/certificate/stepik-certificate.jpg">
       <img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/certificate/stepik-certificate.jpg" alt="stepik-certificate" style="width: 400px;">
     </a>
+    <a href="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/certificate/stepik-certificate_for_sql_window_functions.jpg">
+      <img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/certificate/stepik-certificate_for_sql_window_functions.jpg" alt="stepik-certificate_for_sql_window_functions" style="width: 400px;">
+    </a>
   </div>
 </details>
 
