@@ -74,6 +74,10 @@
     <a href="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/certificate/Stepik-sertificate-SQL.jpg">
       <img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/certificate/Stepik-sertificate-SQL.jpg" alt="Stepik-sertificate-SQL.jpg" style="width: 400px;">
     </a>
+    </a>
+    <a href="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/certificate/Stepik_sql_level_up.jpg">
+      <img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/certificate/Stepik_sql_level_up.jpg" alt="Stepik_sql_level_up.jpg" style="width: 400px;">
+    </a>
   </div>
 </details>
 
