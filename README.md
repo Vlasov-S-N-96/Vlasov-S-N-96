@@ -79,6 +79,11 @@
       <img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/certificate/Stepik_sql_level_up.jpg" alt="Stepik_sql_level_up.jpg" style="width: 400px;">
     </a>
   </div>
+  </a>
+    <a href="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/certificate/Stepik-Pandas.jpg">
+      <img src="https://github.com/Vlasov-S-N-96/Vlasov-S-N-96/blob/main/certificate/Stepik-Pandas.jpg" alt="Stepik-Pandas.jpg" style="width: 400px;">
+    </a>
+  </div>
 </details>
 
 ### Мои проекты
