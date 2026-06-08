@@ -96,17 +96,19 @@ body {
     }
 }
 
-/* МОБИЛЬНЫЕ (до 768px) */
+/* МОБИЛЬНЫЕ (до 768px) - ИСПРАВЛЕНО: бургер ниже */
 @media (max-width: 768px) {
     .header-container {
         flex-direction: column;
         padding: 20px;
         gap: 15px;
+        position: relative;
     }
     
     .photo-block {
         flex-direction: row;
         justify-content: center;
+        align-items: center;
         gap: 15px;
         width: 100%;
     }
@@ -123,6 +125,7 @@ body {
     .title-block {
         text-align: center;
         width: 100%;
+        margin-top: 5px;
     }
     
     .title-block h1 {
@@ -135,7 +138,7 @@ body {
     .burger-menu {
         display: block;
         position: absolute;
-        top: 20px;
+        top: 50px;
         right: 20px;
     }
     
