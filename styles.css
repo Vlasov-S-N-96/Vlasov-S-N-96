@@ -138,8 +138,8 @@ body {
     .burger-menu {
         display: block;
         position: absolute;
-        top: 50px;
-        right: 20px;
+        top: 35px;
+        right: 15px;
     }
     
     .burger-btn {
