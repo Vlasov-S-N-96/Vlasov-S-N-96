@@ -96,7 +96,7 @@ body {
     }
 }
 
-/* МОБИЛЬНЫЕ (до 768px) - ИСПРАВЛЕНО: бургер ниже */
+/* МОБИЛЬНЫЕ (до 768px) */
 @media (max-width: 768px) {
     .header-container {
         position: relative;
@@ -143,8 +143,8 @@ body {
     .burger-menu {
         display: block;
         position: absolute;
-        top: 20px;      /* расстояние от верха */
-        right: 15px;    /* расстояние от правого края */
+        top: 20px;
+        right: 15px;
     }
 
     .burger-btn {
@@ -155,6 +155,58 @@ body {
         border-radius: 30px;
         font-size: 12px;
         cursor: pointer;
+    }
+}
+
+/* МОБИЛЬНЫЕ (до 480px) */
+@media (max-width: 480px) {
+    .avatar {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .name {
+        font-size: 16px;
+    }
+    
+    .title-block h1 {
+        font-size: 16px;
+    }
+    
+    .burger-menu {
+        top: 15px;
+        right: 10px;
+    }
+    
+    .burger-btn {
+        padding: 5px 10px;
+        font-size: 11px;
+    }
+}
+
+/* МОБИЛЬНЫЕ (481px - 600px) */
+@media (min-width: 481px) and (max-width: 600px) {
+    .avatar {
+        width: 75px;
+        height: 75px;
+    }
+    
+    .name {
+        font-size: 17px;
+    }
+    
+    .title-block h1 {
+        font-size: 17px;
+    }
+    
+    .burger-menu {
+        top: 18px;
+        right: 12px;
+    }
+    
+    .burger-btn {
+        padding: 5px 11px;
+        font-size: 11px;
     }
 }
 
