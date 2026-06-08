@@ -1,0 +1,21 @@
+body {
+    background-color: blueviolet;
+}
+
+h1 {
+    color:red
+}
+
+p {
+    margin-top: 100px;
+    margin-bottom: 150px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+p {
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-left: 40px;
+    padding-bottom: 50px;
+}
