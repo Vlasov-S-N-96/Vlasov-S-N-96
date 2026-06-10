@@ -283,10 +283,25 @@ section {
     gap: 20px;
 }
 
+/* ДЕСКТОП - 3 карточки */
 .slider-slide {
     flex: 0 0 calc(33.333% - 14px);
     min-width: 0;
     box-sizing: border-box;
+}
+
+/* ПЛАНШЕТЫ - 2 карточки */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .slider-slide {
+        flex: 0 0 calc(50% - 10px);
+    }
+}
+
+/* МОБИЛЬНЫЕ - 1 карточка */
+@media (max-width: 768px) {
+    .slider-slide {
+        flex: 0 0 100%;
+    }
 }
 
 .slider-arrow {
