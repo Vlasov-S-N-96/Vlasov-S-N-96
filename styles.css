@@ -414,10 +414,9 @@ section {
 .course-icon-img {
     width: 48px;
     height: 48px;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 12px;
-    border: 1px solid #e0e8f0;
-    background: white;
+    background: #f0f2f5;
     flex-shrink: 0;
 }
 
@@ -463,7 +462,6 @@ section {
     width: 100%;
     max-width: 280px;
     height: auto;
-    max-height: 180px;
     object-fit: contain;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
@@ -515,7 +513,8 @@ section {
 
 .project-icon {
     font-size: 36px;
-    margin-bottom: 8px;
+    line-height: 1;
+    display: inline-block;
 }
 
 .project-title {
@@ -673,11 +672,13 @@ section {
     justify-content: center;
     background: rgba(255, 255, 255, 0.15);
     border-radius: 50%;
+    flex-shrink: 0;
 }
 
 .contact-icon svg {
     width: 16px;
     height: 16px;
+    display: block;
 }
 
 .footer-right {
@@ -728,7 +729,7 @@ section {
     margin: 5px 0;
 }
 
-/* ==================== МОБИЛЬНАЯ АДАПТАЦИЯ (ИЗ ВТОРОГО ВАРИАНТА) ==================== */
+/* ==================== МОБИЛЬНАЯ АДАПТАЦИЯ ==================== */
 @media (max-width: 1024px) and (min-width: 769px) {
     .header-container {
         padding: 20px 30px;
@@ -756,13 +757,16 @@ section {
     .footer {
         padding: 30px 30px;
     }
+    /* Планшеты - 2 карточки */
+    .slider-slide {
+        flex: 0 0 calc(50% - 10px);
+    }
 }
 
 @media (max-width: 768px) {
     body {
         padding: 20px 12px;
     }
-    
     .header-container {
         position: relative;
         display: flex;
@@ -771,7 +775,6 @@ section {
         padding: 20px;
         gap: 10px;
     }
-    
     .photo-block {
         display: flex;
         flex-direction: column;
@@ -779,239 +782,191 @@ section {
         gap: 10px;
         width: 100%;
     }
-    
     .avatar {
         width: 80px;
         height: 80px;
         margin: 0 auto;
     }
-    
     .name {
         font-size: 18px;
         text-align: center;
         margin: 0;
     }
-    
     .title-block {
         text-align: center;
         width: 100%;
         margin-top: 5px;
     }
-    
     .title-block h1 {
         font-size: 18px;
         border-left: none;
         padding-left: 0;
         text-align: center;
     }
-    
     .burger-menu {
         display: block;
         position: absolute;
         top: 20px;
         right: 15px;
     }
-    
     .burger-btn {
         padding: 6px 12px;
         font-size: 12px;
         min-width: auto;
         height: auto;
     }
-    
     .nav-buttons {
         display: none;
     }
-    
     .content_section {
         padding: 20px 16px;
     }
-    
     section {
         margin-bottom: 35px;
     }
-    
     .subheadings_info {
         font-size: 20px;
         margin-bottom: 12px;
         padding-left: 12px;
     }
-    
     .about-grid {
         flex-direction: column;
         gap: 20px;
     }
-    
     .about-text {
         padding: 16px;
     }
-    
     .about-text p {
         font-size: 14px;
     }
-    
     .skills-box {
         padding: 16px;
     }
-    
     .skill-tag {
         padding: 4px 10px;
         font-size: 11px;
     }
-    
     .exp-card {
         padding: 16px;
     }
-    
     .exp-title {
         font-size: 16px;
     }
-    
     .exp-card li {
         font-size: 13px;
     }
-    
+    /* СЛАЙДЕР - 1 КАРТОЧКА */
     .slider-wrapper {
         padding: 0 25px;
         margin: 15px 0 25px;
     }
-    
     .slider-slide {
         flex: 0 0 100%;
     }
-    
     .slider-arrow {
         width: 32px;
         height: 32px;
         font-size: 16px;
     }
-    
     .slider-dots {
         gap: 8px;
         margin-top: 15px;
     }
-    
     .slider-dot {
         width: 8px;
         height: 8px;
     }
-    
     .slider-dot.active {
         width: 20px;
     }
-    
     .flip-card {
         min-height: 300px;
     }
-    
     .flip-card-front, .flip-card-back {
         padding: 15px;
     }
-    
     .course-header {
         gap: 10px;
     }
-    
     .course-icon-img {
         width: 40px;
         height: 40px;
     }
-    
     .course-title {
         font-size: 14px;
     }
-    
     .course-desc {
         font-size: 11px;
     }
-    
     .cert-image {
         max-height: 150px;
     }
-    
     .quote-block {
         padding: 15px;
     }
-    
     .quote-block p {
         font-size: 13px;
     }
-    
     .projects-grid {
         gap: 16px;
         margin: 20px 0;
     }
-    
     .project-card {
         padding: 16px;
         min-height: auto;
     }
-    
     .project-icon {
         font-size: 32px;
     }
-    
     .project-title {
         font-size: 16px;
     }
-    
     .project-desc {
         font-size: 13px;
     }
-    
     .tech-badge {
         font-size: 10px;
         padding: 3px 10px;
     }
-    
-    /* Футер мобильный */
+    /* Футер */
     .footer {
         padding: 25px 20px;
     }
-    
     .footer-row {
         flex-direction: column;
         align-items: center;
         gap: 25px;
     }
-    
     .footer-contacts {
         align-items: center;
         width: 100%;
     }
-    
     .footer-contact-link {
         width: 100%;
         justify-content: center;
         padding: 8px 16px;
     }
-    
     .footer-contact-link span {
         font-size: 12px;
     }
-    
     .footer-right {
         align-items: center;
         width: 100%;
     }
-    
     .footer-location, .footer-status {
         width: 100%;
         justify-content: center;
         padding: 8px 16px;
         font-size: 12px;
     }
-    
     .footer-title {
         text-align: center;
         font-size: 15px;
         margin-bottom: 20px;
     }
-    
     .footer-copyright p {
         font-size: 11px;
     }
-    
     .contact-icon {
         width: 24px;
         height: 24px;
@@ -1023,47 +978,42 @@ section {
         width: 70px;
         height: 70px;
     }
-    
     .name {
         font-size: 16px;
     }
-    
     .title-block h1 {
         font-size: 16px;
     }
-    
     .burger-menu {
         top: 15px;
         right: 10px;
     }
-    
     .burger-btn {
         padding: 5px 10px;
         font-size: 11px;
     }
-    
     .subheadings_info {
         font-size: 18px;
     }
-    
-    .slider-slide img {
-        height: 200px;
+    .slider-wrapper {
+        padding: 0 20px;
     }
-    
+    .slider-arrow {
+        width: 28px;
+        height: 28px;
+        font-size: 14px;
+    }
     .tech-badge {
         font-size: 10px;
         padding: 3px 10px;
     }
-    
     .footer-contact-link {
         padding: 8px 15px;
     }
-    
     .footer-location, .footer-status {
         padding: 8px 15px;
         font-size: 12px;
     }
-    
     .footer-copyright p {
         font-size: 10px;
     }
