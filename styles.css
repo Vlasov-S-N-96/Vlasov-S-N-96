@@ -548,18 +548,33 @@ section {
     box-shadow: 0 12px 24px -12px rgba(0, 0, 0, 0.15);
 }
 
+/* Шапка проекта: иконка слева, заголовок справа */
+#projectsContainer .project-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
 #projectsContainer .project-icon {
-    font-size: 48px;
-    line-height: 1;
-    display: inline-block;
+    width: 55px;
+    height: 55px;
+    flex-shrink: 0;
+}
+
+#projectsContainer .project-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
 }
 
 #projectsContainer .project-title {
     font-size: 18px;
     font-weight: 700;
     color: #1e4663;
-    margin-bottom: 8px;
     word-break: break-word;
+    flex: 1;
 }
 
 #projectsContainer .project-desc {
@@ -604,7 +619,6 @@ section {
 #projectsContainer .project-link:hover {
     background: #09a0ab;
 }
-
 /* ===== МОДАЛЬНОЕ ОКНО ===== */
 .modal {
     display: none;
