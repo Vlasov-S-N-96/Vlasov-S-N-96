@@ -47,10 +47,22 @@ const coursesData = [
     { title: "Введение в статистику\nи проверку гипотез", progress: "✅ Успешно завершён", iconImg: "image/icon_courses/statistic.png", desc: "Распределения, Z-test, T-test, A/B тестирование, мощность теста, sample size", certImage: "image/certificate_foto/Stepik-sertificate_statistik.jpg" }
 ];
 
-// ПРОЕКТЫ
+// ПРОЕКТЫ (с картинками)
 const projectsData = [
-    { title: "Тестовые артефакты (чек-листы, тест-кейсы)", desc: "Чек-листы, тест-кейсы, анализ требований, техники тест-дизайна.", tech: ["Тест-дизайн", "Qase", "Jira", "SQL"], link: "https://vlasov-s-n-96.github.io/Work_job_project/", icon: "📋" },
-    { title: "Витрина данных для аналитиков", desc: "Агрегированные метрики. Data Lake (Spark) → Airflow → Greenplum.", tech: ["PySpark", "Airflow", "Greenplum", "S3"], link: "https://vlasov-s-n-96.github.io/Data_mart_project_for_Analysts/", icon: "📊" }
+    { 
+        title: "Тестовые артефакты (чек-листы, тест-кейсы)", 
+        desc: "Чек-листы, тест-кейсы, анализ требований, техники тест-дизайна.", 
+        tech: ["Тест-дизайн", "Qase", "Jira", "SQL"], 
+        link: "https://vlasov-s-n-96.github.io/Work_job_project/", 
+        iconImg: "image/icon_courses/test-project.png"
+    },
+    { 
+        title: "Витрина данных для аналитиков", 
+        desc: "Агрегированные метрики. Data Lake (Spark) → Airflow → Greenplum.", 
+        tech: ["PySpark", "Airflow", "Greenplum", "S3"], 
+        link: "https://vlasov-s-n-96.github.io/Data_mart_project_for_Analysts/", 
+        iconImg: "image/icon_courses/analys_test_project.png"
+    }
 ];
 
 // Вспомогательные функции
@@ -332,11 +344,14 @@ function renderCourseCard(course) {
     `;
 }
 
-// Рендер карточки проекта
+// Рендер карточки проекта (с картинкой)
 function renderProjectCard(project) {
     return `
         <div class="project-card">
-            <div class="project-icon" style="font-size: 48px;">${project.icon || '📁'}</div>
+            <div class="project-icon">
+                <img src="${project.iconImg}" alt="Иконка" style="width:55px;height:55px;object-fit:cover;border-radius:16px;" 
+                    onerror="this.onerror=null; this.parentElement.innerHTML='📁';">
+            </div>
             <div class="project-title">${escapeHtml(project.title)}</div>
             <div class="project-desc">${escapeHtml(project.desc)}</div>
             <div class="project-tech">${project.tech.map(t => `<span class="tech-badge">${escapeHtml(t)}</span>`).join('')}</div>
