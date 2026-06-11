@@ -33,24 +33,24 @@ const experienceData = [
 
 // КУРСЫ 
 const coursesData = [
-    { title: "Тестирование ПО с нуля. Продвинутый курс с ИИ", progress: "78% пройдено", iconImg: "image/icon_courses/Testing_advanced_courses_ii+prectica.png", desc: "Типы тестирования, тест-дизайн, тестовая документация, работа с Jira, Postman, SQL, Git, CI/CD", certImage: "image/certificate_foto/testing_advanced.jpg" },
-    { title: "Тестирование ПО. Симулятор собеседования с ИИ", progress: "✅ Успешно завершён", iconImg: "image/icon_courses/Testing_advanced_courses_ii.png", desc: "Подготовка к интервью: теория, тест-дизайн, API, SQL, ситуационные кейсы", certImage: "image/certificate_foto/testing_interview.jpg" },
-    { title: "Тестирование ПО. Практические тренажеры с ИИ", progress: "✅ Успешно завершён", iconImg: "image/icon_courses/AI_testing_simullytions.png", desc: "Классы эквивалентности, граничные значения, pairwise, таблицы решений, DevTools", certImage: "image/certificate_foto/testing_trainers.jpg" },
-    { title: "Инженер данных с нуля (Karpov.Courses)", progress: "✅ Успешно завершён", iconImg: "image/icon_courses/carpov_courses.jpg", desc: "SQL, Linux, PostgreSQL, ClickHouse, Python, Git, Spark, Airflow, DWH, финальный проект", certImage: "image/certificate_foto/karpov-certificate.jpg" },
-    { title: "Python: анализ данных с Pandas", progress: "✅ Успешно завершён", iconImg: "image/icon_courses/pandas_python.png", desc: "Чтение данных, фильтрация, группировка, merge, работа с датами, визуализация", certImage: "image/certificate_foto/Stepik-Pandas.jpg" },
+    { title: "Тестирование ПО с нуля.\nПродвинутый курс\nс ИИ", progress: "78% пройдено", iconImg: "image/icon_courses/Testing_advanced_courses_ii+prectica.png", desc: "Типы тестирования, тест-дизайн, тестовая документация, работа с Jira, Postman, SQL, Git, CI/CD", certImage: "image/certificate_foto/testing_advanced.jpg" },
+    { title: "Тестирование ПО.\nСимулятор собеседования\nс ИИ", progress: "✅ Успешно завершён", iconImg: "image/icon_courses/Testing_advanced_courses_ii.png", desc: "Подготовка к интервью: теория, тест-дизайн, API, SQL, ситуационные кейсы", certImage: "image/certificate_foto/testing_interview.jpg" },
+    { title: "Тестирование ПО.\nПрактические\nтренажеры с ИИ", progress: "✅ Успешно завершён", iconImg: "image/icon_courses/AI_testing_simullytions.png", desc: "Классы эквивалентности, граничные значения, pairwise, таблицы решений, DevTools", certImage: "image/certificate_foto/testing_trainers.jpg" },
+    { title: "Инженер данных с нуля\n(Karpov.Courses)", progress: "✅ Успешно завершён", iconImg: "image/icon_courses/carpov_courses.jpg", desc: "SQL, Linux, PostgreSQL, ClickHouse, Python, Git, Spark, Airflow, DWH, финальный проект", certImage: "image/certificate_foto/karpov-certificate.jpg" },
+    { title: "Python: анализ данных\nс Pandas", progress: "✅ Успешно завершён", iconImg: "image/icon_courses/pandas_python.png", desc: "Чтение данных, фильтрация, группировка, merge, работа с датами, визуализация", certImage: "image/certificate_foto/Stepik-Pandas.jpg" },
     { title: "SQL для всех", progress: "✅ Успешно завершён", iconImg: "image/icon_courses/sql_level.png", desc: "SELECT, JOIN, GROUP BY, агрегатные функции, подзапросы, создание отчётов", certImage: "image/certificate_foto/Stepik-sertificate-SQL.jpg" },
     { title: "SQL для всех. Level Up", progress: "✅ Успешно завершён", iconImg: "image/icon_courses/SQL_level_up.png", desc: "Продвинутые запросы, вложенные подзапросы, сложные JOIN, оптимизация", certImage: "image/certificate_foto/Stepik_sql_level_up.jpg" },
     { title: "Оконные функции SQL", progress: "✅ Успешно завершён", iconImg: "image/icon_courses/windows_funkcion.png", desc: "ROW_NUMBER, RANK, LEAD, LAG, агрегация с окнами, фреймы ROWS/RANGE", certImage: "image/certificate_foto/stepik-certificate_for_sql_window_functions.jpg" },
-    { title: "Интерактивный тренажер по SQL", progress: "✅ Успешно завершён", iconImg: "image/icon_courses/Interactive_sql.jpg", desc: "100+ практических задач, от простых запросов до сложных аналитических", certImage: "image/certificate_foto/stepik-certificate.jpg" },
-    { title: "Excel: основное для работы с массивами и базами данных", progress: "✅ Успешно завершён", iconImg: "image/icon_courses/Exel_massive_bd.jpg", desc: "ВПР, ИНДЕКС-ПОИСКПОЗ, СМЕЩ, БД-функции, умные таблицы, Power Pivot", certImage: "image/certificate_foto/Exel_massive_bd.png" },
-    { title: "Excel: от новичка до уверенного бизнес-пользователя", progress: "✅ Успешно завершён", iconImg: "image/icon_courses/Excel_user.jpg", desc: "Сводные таблицы, диаграммы, условное форматирование, защита данных", certImage: "image/certificate_foto/Exel_user.png" },
-    { title: "Введение в статистику и проверку гипотез", progress: "✅ Успешно завершён", iconImg: "image/icon_courses/statistic.png", desc: "Распределения, Z-test, T-test, A/B тестирование, мощность теста, sample size", certImage: "image/certificate_foto/Stepik-sertificate_statistik.jpg" }
+    { title: "Интерактивный тренажер\nпо SQL", progress: "✅ Успешно завершён", iconImg: "image/icon_courses/Interactive_sql.jpg", desc: "100+ практических задач, от простых запросов до сложных аналитических", certImage: "image/certificate_foto/stepik-certificate.jpg" },
+    { title: "Excel: основное для работы\nс массивами и базами данных", progress: "✅ Успешно завершён", iconImg: "image/icon_courses/Exel_massive_bd.jpg", desc: "ВПР, ИНДЕКС-ПОИСКПОЗ, СМЕЩ, БД-функции, умные таблицы, Power Pivot", certImage: "image/certificate_foto/Exel_massive_bd.png" },
+    { title: "Excel: от новичка до\nуверенного бизнес-пользователя", progress: "✅ Успешно завершён", iconImg: "image/icon_courses/Excel_user.jpg", desc: "Сводные таблицы, диаграммы, условное форматирование, защита данных", certImage: "image/certificate_foto/Exel_user.png" },
+    { title: "Введение в статистику\nи проверку гипотез", progress: "✅ Успешно завершён", iconImg: "image/icon_courses/statistic.png", desc: "Распределения, Z-test, T-test, A/B тестирование, мощность теста, sample size", certImage: "image/certificate_foto/Stepik-sertificate_statistik.jpg" }
 ];
 
 // ПРОЕКТЫ
 const projectsData = [
-    { title: "Тестовые артефакты (чек-листы, тест-кейсы)", desc: "Чек-листы, тест-кейсы, анализ требований, техники тест-дизайна.", tech: ["Тест-дизайн", "Qase", "Jira", "SQL"], link: "https://vlasov-s-n-96.github.io/Work_job_project/", iconImg: "image/icon_courses/test-project.png" },
-    { title: "Витрина данных для аналитиков", desc: "Агрегированные метрики. Data Lake (Spark) → Airflow → Greenplum.", tech: ["PySpark", "Airflow", "Greenplum", "S3"], link: "https://vlasov-s-n-96.github.io/Data_mart_project_for_Analysts/", iconImg: "image/icon_courses/analys_test_project.png" }
+    { title: "Тестовые артефакты (чек-листы, тест-кейсы)", desc: "Чек-листы, тест-кейсы, анализ требований, техники тест-дизайна.", tech: ["Тест-дизайн", "Qase", "Jira", "SQL"], link: "https://vlasov-s-n-96.github.io/Work_job_project/", icon: "📋" },
+    { title: "Витрина данных для аналитиков", desc: "Агрегированные метрики. Data Lake (Spark) → Airflow → Greenplum.", tech: ["PySpark", "Airflow", "Greenplum", "S3"], link: "https://vlasov-s-n-96.github.io/Data_mart_project_for_Analysts/", icon: "📊" }
 ];
 
 // Вспомогательные функции
@@ -183,7 +183,6 @@ function createSlider(containerId, items, cardRenderer) {
     
     let currentIndex = 0;
     const totalSlides = items.length;
-    
     let startX = 0;
     let isDragging = false;
     let startTransform = 0;
@@ -305,8 +304,10 @@ function createSlider(containerId, items, cardRenderer) {
     }, 100);
 }
 
-// Рендер карточки курса
+// Рендер карточки курса (с поддержкой переносов строк)
 function renderCourseCard(course) {
+    const titleHtml = course.title.replace(/\n/g, '<br>');
+    
     return `
         <div class="flip-card">
             <div class="flip-card-inner">
@@ -314,7 +315,7 @@ function renderCourseCard(course) {
                     <div class="course-header">
                         <img class="course-icon-img" src="${course.iconImg}" alt="Иконка" 
                             onerror="this.onerror=null; this.style.display='none';">
-                        <div class="course-title">${escapeHtml(course.title)}</div>
+                        <div class="course-title">${titleHtml}</div>
                     </div>
                     <div class="course-badge">${escapeHtml(course.progress)}</div>
                     <div class="course-desc">${escapeHtml(course.desc)}</div>
@@ -331,14 +332,11 @@ function renderCourseCard(course) {
     `;
 }
 
-// Рендер карточки проекта (с картинкой)
+// Рендер карточки проекта
 function renderProjectCard(project) {
     return `
         <div class="project-card">
-            <div class="project-icon">
-                <img src="${project.iconImg}" alt="Иконка" style="width:48px;height:48px;object-fit:contain;" 
-                    onerror="this.onerror=null; this.parentElement.innerHTML='📁';">
-            </div>
+            <div class="project-icon" style="font-size: 48px;">${project.icon || '📁'}</div>
             <div class="project-title">${escapeHtml(project.title)}</div>
             <div class="project-desc">${escapeHtml(project.desc)}</div>
             <div class="project-tech">${project.tech.map(t => `<span class="tech-badge">${escapeHtml(t)}</span>`).join('')}</div>
