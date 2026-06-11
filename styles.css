@@ -812,4 +812,205 @@ section {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap:
+        gap: 10px;
+        width: 100%;
+    }
+    .avatar {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto;
+    }
+    .name {
+        font-size: 18px;
+        text-align: center;
+        margin: 0;
+    }
+    .title-block {
+        text-align: center;
+        width: 100%;
+        margin-top: 5px;
+    }
+    .title-block h1 {
+        font-size: 18px;
+        border-left: none;
+        padding-left: 0;
+        text-align: center;
+    }
+    .burger-menu {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 15px;
+    }
+    .burger-btn {
+        padding: 6px 12px;
+        font-size: 12px;
+        min-width: auto;
+        height: auto;
+    }
+    .nav-buttons {
+        display: none;
+    }
+    .content_section {
+        padding: 20px 16px;
+    }
+    section {
+        margin-bottom: 35px;
+    }
+    .subheadings_info {
+        font-size: 20px;
+        margin-bottom: 12px;
+        padding-left: 12px;
+    }
+    .about-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .about-text {
+        padding: 16px;
+    }
+    .about-text p {
+        font-size: 14px;
+    }
+    .skills-box {
+        padding: 16px;
+    }
+    .skill-tag {
+        padding: 4px 10px;
+        font-size: 11px;
+    }
+    .exp-card {
+        padding: 16px;
+    }
+    .exp-title {
+        font-size: 16px;
+    }
+    .exp-card li {
+        font-size: 13px;
+    }
+    .flip-card {
+        min-height: 300px;
+    }
+    .flip-card-front, .flip-card-back {
+        padding: 15px;
+    }
+    .course-header {
+        gap: 10px;
+    }
+    .course-icon-img {
+        width: 45px;
+        height: 45px;
+    }
+    .course-title {
+        font-size: 13px;
+    }
+    .course-desc {
+        font-size: 11px;
+    }
+    .cert-image {
+        max-height: 150px;
+    }
+    .quote-block {
+        padding: 15px;
+    }
+    .quote-block p {
+        font-size: 13px;
+    }
+    #projectsContainer .project-card {
+        padding: 16px;
+        min-height: auto;
+    }
+    #projectsContainer .project-icon {
+        font-size: 32px;
+    }
+    #projectsContainer .project-title {
+        font-size: 16px;
+    }
+    #projectsContainer .project-desc {
+        font-size: 13px;
+    }
+    #projectsContainer .tech-badge {
+        font-size: 10px;
+        padding: 3px 10px;
+    }
+    .footer {
+        padding: 25px 20px;
+    }
+    .footer-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+    .footer-contacts {
+        align-items: center;
+        width: 100%;
+    }
+    .footer-contact-link {
+        width: 100%;
+        justify-content: center;
+        padding: 8px 16px;
+    }
+    .footer-contact-link span {
+        font-size: 12px;
+    }
+    .footer-right {
+        align-items: center;
+        width: 100%;
+    }
+    .footer-location, .footer-status {
+        width: 100%;
+        justify-content: center;
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+    .footer-title {
+        text-align: center;
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+    .footer-copyright p {
+        font-size: 11px;
+    }
+    .contact-icon {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .avatar {
+        width: 70px;
+        height: 70px;
+    }
+    .name {
+        font-size: 16px;
+    }
+    .title-block h1 {
+        font-size: 16px;
+    }
+    .burger-menu {
+        top: 15px;
+        right: 10px;
+    }
+    .burger-btn {
+        padding: 5px 10px;
+        font-size: 11px;
+    }
+    .subheadings_info {
+        font-size: 18px;
+    }
+    #projectsContainer .tech-badge {
+        font-size: 10px;
+        padding: 3px 10px;
+    }
+    .footer-contact-link {
+        padding: 8px 15px;
+    }
+    .footer-location, .footer-status {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+    .footer-copyright p {
+        font-size: 10px;
+    }
+}
