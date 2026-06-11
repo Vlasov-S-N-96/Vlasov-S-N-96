@@ -344,15 +344,17 @@ function renderCourseCard(course) {
     `;
 }
 
-// Рендер карточки проекта (с картинкой)
+// Рендер карточки проекта (с картинкой как в курсах)
 function renderProjectCard(project) {
     return `
         <div class="project-card">
-            <div class="project-icon">
-                <img src="${project.iconImg}" alt="Иконка" style="width:55px;height:55px;object-fit:cover;border-radius:16px;" 
-                    onerror="this.onerror=null; this.parentElement.innerHTML='📁';">
+            <div class="project-header">
+                <div class="project-icon">
+                    <img src="${project.iconImg}" alt="Иконка" 
+                        onerror="this.onerror=null; this.parentElement.innerHTML='📁';">
+                </div>
+                <div class="project-title">${escapeHtml(project.title)}</div>
             </div>
-            <div class="project-title">${escapeHtml(project.title)}</div>
             <div class="project-desc">${escapeHtml(project.desc)}</div>
             <div class="project-tech">${project.tech.map(t => `<span class="tech-badge">${escapeHtml(t)}</span>`).join('')}</div>
             <a href="${project.link}" class="project-link" target="_blank">🔗 GitHub →</a>
