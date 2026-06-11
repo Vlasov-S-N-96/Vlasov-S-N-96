@@ -184,9 +184,7 @@ function createSlider(containerId, items, cardRenderer) {
     let currentIndex = 0;
     const totalSlides = items.length;
     
-    // Переменные для свайпа
     let startX = 0;
-    let currentX = 0;
     let isDragging = false;
     let startTransform = 0;
     
@@ -222,7 +220,6 @@ function createSlider(containerId, items, cardRenderer) {
         }
     }
     
-    // Обработчики свайпа
     function handleTouchStart(e) {
         startX = e.touches[0].clientX;
         isDragging = true;
@@ -236,8 +233,7 @@ function createSlider(containerId, items, cardRenderer) {
     
     function handleTouchMove(e) {
         if (!isDragging) return;
-        currentX = e.touches[0].clientX;
-        const diff = currentX - startX;
+        const diff = e.touches[0].clientX - startX;
         sliderTrack.style.transform = `translateX(${startTransform + diff}px)`;
     }
     
@@ -245,9 +241,7 @@ function createSlider(containerId, items, cardRenderer) {
         if (!isDragging) return;
         isDragging = false;
         sliderTrack.style.transition = 'transform 0.3s ease-out';
-        
-        const endX = e.changedTouches[0].clientX;
-        const diff = endX - startX;
+        const diff = e.changedTouches[0].clientX - startX;
         
         if (Math.abs(diff) > 50) {
             if (diff > 0 && currentIndex > 0) {
@@ -259,17 +253,11 @@ function createSlider(containerId, items, cardRenderer) {
         updateSlider();
     }
     
-    // Создаем точки
     if (showNavigation) {
         for (let i = 0; i < totalSlides; i++) {
             const dot = document.createElement('div');
             dot.className = 'slider-dot';
-            dot.style.width = '10px';
-            dot.style.height = '10px';
-            dot.style.borderRadius = '50%';
-            dot.style.background = '#cbd5e1';
-            dot.style.cursor = 'pointer';
-            dot.style.transition = 'all 0.2s';
+            dot.style.cssText = 'width:10px;height:10px;border-radius:50%;background:#cbd5e1;cursor:pointer;transition:all 0.2s;';
             dot.addEventListener('click', () => {
                 currentIndex = i;
                 updateSlider();
@@ -278,7 +266,6 @@ function createSlider(containerId, items, cardRenderer) {
         }
     }
     
-    // Обработчики стрелок
     prevBtn.addEventListener('click', () => {
         if (currentIndex > 0) {
             currentIndex--;
@@ -293,28 +280,20 @@ function createSlider(containerId, items, cardRenderer) {
         }
     });
     
-    // Обработчики свайпа
     sliderTrack.addEventListener('touchstart', handleTouchStart, { passive: false });
     sliderTrack.addEventListener('touchmove', handleTouchMove, { passive: false });
     sliderTrack.addEventListener('touchend', handleTouchEnd);
     
-    // Адаптация под разные экраны
     function handleResize() {
         const screenWidth = window.innerWidth;
         const slides = document.querySelectorAll(`#${containerId} .slider-slide`);
         
         if (screenWidth <= 768) {
-            slides.forEach(slide => {
-                slide.style.flex = '0 0 100%';
-            });
+            slides.forEach(slide => slide.style.flex = '0 0 100%');
         } else if (screenWidth <= 1024) {
-            slides.forEach(slide => {
-                slide.style.flex = '0 0 calc(50% - 10px)';
-            });
+            slides.forEach(slide => slide.style.flex = '0 0 calc(50% - 10px)');
         } else {
-            slides.forEach(slide => {
-                slide.style.flex = '0 0 calc(33.333% - 14px)';
-            });
+            slides.forEach(slide => slide.style.flex = '0 0 calc(33.333% - 14px)');
         }
         updateSlider();
     }
@@ -352,11 +331,14 @@ function renderCourseCard(course) {
     `;
 }
 
-// Рендер карточки проекта
+// Рендер карточки проекта (с картинкой)
 function renderProjectCard(project) {
     return `
         <div class="project-card">
-            <div class="project-icon">${project.icon}</div>
+            <div class="project-icon">
+                <img src="${project.iconImg}" alt="Иконка" style="width:48px;height:48px;object-fit:contain;" 
+                    onerror="this.onerror=null; this.parentElement.innerHTML='📁';">
+            </div>
             <div class="project-title">${escapeHtml(project.title)}</div>
             <div class="project-desc">${escapeHtml(project.desc)}</div>
             <div class="project-tech">${project.tech.map(t => `<span class="tech-badge">${escapeHtml(t)}</span>`).join('')}</div>
