@@ -49,8 +49,8 @@ const coursesData = [
 
 // ПРОЕКТЫ
 const projectsData = [
-    { title: "Тестовые артефакты (чек-листы, тест-кейсы)", desc: "Чек-листы, тест-кейсы, анализ требований, техники тест-дизайна.", tech: ["Тест-дизайн", "Qase", "Jira", "SQL"], link: "https://vlasov-s-n-96.github.io/Work_job_project/", icon: "🧪" },
-    { title: "Витрина данных для аналитиков", desc: "Агрегированные метрики. Data Lake (Spark) → Airflow → Greenplum.", tech: ["PySpark", "Airflow", "Greenplum", "S3"], link: "https://vlasov-s-n-96.github.io/Data_mart_project_for_Analysts/", icon: "📊" }
+    { title: "Тестовые артефакты (чек-листы, тест-кейсы)", desc: "Чек-листы, тест-кейсы, анализ требований, техники тест-дизайна.", tech: ["Тест-дизайн", "Qase", "Jira", "SQL"], link: "https://vlasov-s-n-96.github.io/Work_job_project/", iconImg: "image/icon_courses/test-project.png" },
+    { title: "Витрина данных для аналитиков", desc: "Агрегированные метрики. Data Lake (Spark) → Airflow → Greenplum.", tech: ["PySpark", "Airflow", "Greenplum", "S3"], link: "https://vlasov-s-n-96.github.io/Data_mart_project_for_Analysts/", iconImg: "image/icon_courses/analys_test_project.png" }
 ];
 
 // Вспомогательные функции
