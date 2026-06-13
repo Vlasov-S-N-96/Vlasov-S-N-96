@@ -39,7 +39,7 @@ const coursesData = [
     { title: "Инженер данных с нуля\n(Karpov.Courses)", progress: "✅ Успешно завершён", iconImg: "image/icon_courses/carpov_courses.jpg", desc: "SQL, Linux, PostgreSQL, ClickHouse, Python, Git, Spark, Airflow, DWH, финальный проект", certImage: "image/certificate_foto/karpov-certificate.jpg" },
     { title: "Python: анализ данных\nс Pandas", progress: "✅ Успешно завершён", iconImg: "image/icon_courses/pandas_python.png", desc: "Чтение данных, фильтрация, группировка, merge, работа с датами, визуализация", certImage: "image/certificate_foto/Stepik-Pandas.jpg" },
     { title: "SQL для всех", progress: "✅ Успешно завершён", iconImg: "image/icon_courses/sql_level.png", desc: "SELECT, JOIN, GROUP BY, агрегатные функции, подзапросы, создание отчётов", certImage: "image/certificate_foto/Stepik-sertificate-SQL.jpg" },
-    { title: "SQL для всех. Level Up", progress: "✅ Успешно завершён", iconImg: "image/icon_courses/SQL_level_up.png", desc: "Продвинутые запросы, вложенные подзапросы, сложные JOIN, оптимизация", certImage: "image/certificate_foto/Stepik_sql_level_up.jpg" },
+    { title: "SQL для всех.\nLevel Up", progress: "✅ Успешно завершён", iconImg: "image/icon_courses/SQL_level_up.png", desc: "Продвинутые запросы, вложенные подзапросы, сложные JOIN, оптимизация", certImage: "image/certificate_foto/Stepik_sql_level_up.jpg" },
     { title: "Оконные функции SQL", progress: "✅ Успешно завершён", iconImg: "image/icon_courses/windows_funkcion.png", desc: "ROW_NUMBER, RANK, LEAD, LAG, агрегация с окнами, фреймы ROWS/RANGE", certImage: "image/certificate_foto/stepik-certificate_for_sql_window_functions.jpg" },
     { title: "Интерактивный тренажер\nпо SQL", progress: "✅ Успешно завершён", iconImg: "image/icon_courses/Interactive_sql.jpg", desc: "100+ практических задач, от простых запросов до сложных аналитических", certImage: "image/certificate_foto/stepik-certificate.jpg" },
     { title: "Excel: основное для работы\nс массивами и базами данных", progress: "✅ Успешно завершён", iconImg: "image/icon_courses/Exel_massive_bd.jpg", desc: "ВПР, ИНДЕКС-ПОИСКПОЗ, СМЕЩ, БД-функции, умные таблицы, Power Pivot", certImage: "image/certificate_foto/Exel_massive_bd.png" },
@@ -47,7 +47,7 @@ const coursesData = [
     { title: "Введение в статистику\nи проверку гипотез", progress: "✅ Успешно завершён", iconImg: "image/icon_courses/statistic.png", desc: "Распределения, Z-test, T-test, A/B тестирование, мощность теста, sample size", certImage: "image/certificate_foto/Stepik-sertificate_statistik.jpg" }
 ];
 
-// ПРОЕКТЫ (с картинками)
+// ПРОЕКТЫ
 const projectsData = [
     { 
         title: "Тестовые артефакты (чек-листы, тест-кейсы)", 
@@ -344,7 +344,7 @@ function renderCourseCard(course) {
     `;
 }
 
-// Рендер карточки проекта (с картинкой как в курсах)
+// Рендер карточки проекта
 function renderProjectCard(project) {
     return `
         <div class="project-card">
@@ -369,36 +369,28 @@ function initBurger() {
     const overlay = document.getElementById('menuOverlay');
     if (!burger) return;
     
-    const newBurger = burger.cloneNode(true);
-    burger.parentNode.replaceChild(newBurger, burger);
-    
-    newBurger.addEventListener('click', (e) => {
+    burger.addEventListener('click', (e) => {
         e.preventDefault();
         e.stopPropagation();
+        burger.classList.toggle('active');
         mobileNav.classList.toggle('active');
         overlay.classList.toggle('active');
         document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
-        
-        if (mobileNav.classList.contains('active')) {
-            newBurger.innerHTML = '✕ Закрыть';
-        } else {
-            newBurger.innerHTML = '☰ Меню';
-        }
     });
     
     overlay?.addEventListener('click', () => {
+        burger.classList.remove('active');
         mobileNav.classList.remove('active');
         overlay.classList.remove('active');
         document.body.style.overflow = '';
-        newBurger.innerHTML = '☰ Меню';
     });
     
     mobileNav?.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', (e) => {
+            burger.classList.remove('active');
             mobileNav.classList.remove('active');
             overlay.classList.remove('active');
             document.body.style.overflow = '';
-            newBurger.innerHTML = '☰ Меню';
             const targetId = link.getAttribute('href');
             if (targetId?.startsWith('#')) {
                 e.preventDefault();
