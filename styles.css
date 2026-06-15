@@ -737,7 +737,7 @@ section {
 }
 
 .footer-contact-link:hover {
-    background: rgba(255, 255, 255, 0.18);
+    background: #1e4663;
     transform: translateX(5px);
 }
 
@@ -773,6 +773,12 @@ section {
     border-radius: 50px;
     font-size: 13px;
     font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.footer-location:hover, .footer-status:hover {
+    background: #1e4663;
+    transform: translateX(5px);
 }
 
 .status-dot {
