@@ -2,9 +2,11 @@
 
 // Навыки
 const skillsList = [
-    "SQL (MySQL, PostgreSQL)", "Python (pandas, автоматизация)", "Postman / API",
-    "Git / GitHub", "Linux / Bash", "Jira / Qase", "Docker (базово)",
-    "Тест-дизайн", "Тестовая документация", "Анализ данных", "Excel"
+    "Тест-дизайн", "Тест-кейсы / Чек-листы", "Баг-репорты", "Анализ требований",
+    "Postman / Swagger", "Test IT", "Jira / YouTrack", "Chrome DevTools",
+    "Charles Proxy", "Android Studio", "REST / SOAP API", "SQL (PostgreSQL, MySQL)",
+    "Python (pandas)", "Git / GitHub", "Bash", "Jenkins / GitHub Actions",
+    "Docker (базово)", "Linux", "Excel"
 ];
 
 // Опыт работы
