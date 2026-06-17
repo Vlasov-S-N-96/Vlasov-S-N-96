@@ -40,7 +40,7 @@ const staticCoursesData = [
         progress: "✅ Успешно завершён",
         date: "2025-05-05", 
         iconImg: "image/icon_courses/carpov_courses.jpg", 
-        desc: "SQL, Linux, PostgreSQL, ClickHouse, Python, Git, Spark, Airflow, DWH, финальный проект", 
+        desc: "SQL, Linux, PostgreSQL, ClickHouse, Python, Git, Spark, Airflow, DWH", 
         certImage: "image/certificate_foto/karpov-certificate.jpg",
         stepikCourseId: 95367,
         pdfUrl: "https://vlasov-s-n-96.github.io/Vlasov-S-N-96/image/certificate_foto/karpov-certificate.pdf"  // ваш PDF
