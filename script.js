@@ -33,7 +33,20 @@ const experienceData = [
     }
 ];
 
-// ПРОЕКТЫ (остаются без изменений)
+// ===== СТАТИЧЕСКИЙ КУРС (только Karpov.Courses) =====
+// Все остальные курсы подтягиваются из Stepik автоматически
+const staticCoursesData = [
+    { 
+        title: "Инженер данных с нуля\n(Karpov.Courses)", 
+        progress: "✅ Успешно завершён", 
+        iconImg: "image/icon_courses/carpov_courses.jpg", 
+        desc: "SQL, Linux, PostgreSQL, ClickHouse, Python, Git, Spark, Airflow, DWH, финальный проект", 
+        certImage: "image/certificate_foto/karpov-certificate.jpg",
+        stepikCourseId: 95367  // ID курса на Stepik, чтобы исключить дублирование
+    }
+];
+
+// ПРОЕКТЫ
 const projectsData = [
     { 
         title: "Тестовые артефакты (чек-листы, тест-кейсы)", 
@@ -51,7 +64,7 @@ const projectsData = [
     }
 ];
 
-// Вспомогательные функции
+// ===== ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ =====
 function escapeHtml(str) {
     if (!str) return '';
     return str.replace(/[&<>]/g, m => m === '&' ? '&amp;' : m === '<' ? '&lt;' : '&gt;');
@@ -77,7 +90,7 @@ function renderExperience() {
     });
 }
 
-// Модальное окно (для совместимости, но не используется для Stepik)
+// Модальное окно (для статических курсов)
 const modal = document.getElementById('certModal');
 const modalImg = document.getElementById('modalImage');
 const closeModal = document.querySelector('.modal-close');
@@ -302,29 +315,58 @@ function createSlider(containerId, items, cardRenderer) {
     }, 100);
 }
 
-// Рендер карточки курса (только для сертификатов Stepik)
+// ===== РЕНДЕР КАРТОЧКИ КУРСА =====
 function renderCourseCard(course) {
     const titleHtml = course.title.replace(/\n/g, '<br>');
-    return `
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <div class="course-header">
-                        <div class="course-icon-img" style="background: #1e4663; border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 28px; color: white;">📜</div>
-                        <div class="course-title">${titleHtml}</div>
+    const star = course.isExcellent ? ' ⭐' : '';
+    
+    // Если это статический курс (есть iconImg и certImage)
+    if (course.iconImg && course.certImage) {
+        return `
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 20px;">
+                        <img src="${course.iconImg}" alt="Иконка" style="width: 55px; height: 55px; object-fit: cover; border-radius: 16px; background: #f0f2f5; margin-bottom: 10px;" onerror="this.style.display='none';">
+                        <div class="course-title" style="font-size: 18px; font-weight: 700; color: #1e4663; margin-bottom: 8px;">${titleHtml}</div>
+                        <div class="course-badge" style="background: #16d6ad20; color: #107980; padding: 4px 12px; border-radius: 20px; font-size: 13px; font-weight: 600; margin-bottom: 8px;">${escapeHtml(course.progress)}</div>
+                        <div class="course-desc" style="font-size: 14px; color: #4a627a; margin-bottom: 8px;">${escapeHtml(course.desc)}</div>
+                        <div class="click-hint" style="font-size: 12px; color: #a0b8d0;">✨ Нажмите для сертификата</div>
                     </div>
-                    <div class="course-badge">✅ Получен ${course.progress}</div>
-                    <div class="course-desc">Сертификат Stepik</div>
-                    <div class="click-hint">✨ Нажмите, чтобы открыть PDF</div>
-                </div>
-                <div class="flip-card-back" style="background: #1e4663; color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px;">
-                    <p style="font-size: 16px; font-weight: 600;">📄 Сертификат</p>
-                    <a href="${course.pdfUrl}" target="_blank" style="background: white; color: #1e4663; padding: 12px 24px; border-radius: 30px; text-decoration: none; font-weight: 600;">Открыть PDF →</a>
-                    <span style="font-size: 12px; opacity: 0.7;">Нажмите, чтобы скачать или просмотреть</span>
+                    <div class="flip-card-back" style="background: #1e4663; color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 12px; padding: 20px;">
+                        <img class="cert-image" src="${course.certImage}" alt="Сертификат" 
+                            onclick="event.stopPropagation(); openCertModal('${course.certImage}')"
+                            style="max-width: 100%; max-height: 200px; border-radius: 8px; cursor: pointer;"
+                            onerror="this.onerror=null; this.parentElement.innerHTML='<div style=\'color:white;\'>⚠️ Сертификат недоступен</div>';">
+                        <div style="font-size: 12px; opacity: 0.8;">🔍 Кликните для увеличения</div>
+                    </div>
                 </div>
             </div>
-        </div>
-    `;
+        `;
+    } else {
+        // Динамический курс из Stepik
+        // Используем cover_url из JSON, если есть; иначе — иконка по умолчанию
+        const iconUrl = course.iconUrl || 'https://stepik.org/static/img/logo.svg';
+        const label = course.customLabel || 'Сертификат Stepik';
+        
+        return `
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 20px;">
+                        <img src="${iconUrl}" alt="Иконка курса" style="width: 55px; height: 55px; object-fit: contain; margin-bottom: 10px;" onerror="this.style.display='none';">
+                        <div class="course-title" style="font-size: 18px; font-weight: 700; color: #1e4663; margin-bottom: 8px;">${titleHtml}${star}</div>
+                        <div class="course-badge" style="background: #16d6ad20; color: #107980; padding: 4px 12px; border-radius: 20px; font-size: 13px; font-weight: 600; margin-bottom: 8px;">✅ Получен ${course.progress}</div>
+                        <div class="course-desc" style="font-size: 14px; color: #4a627a; margin-bottom: 8px;">${escapeHtml(label)}</div>
+                        <div class="click-hint" style="font-size: 12px; color: #a0b8d0;">✨ Нажмите, чтобы открыть PDF</div>
+                    </div>
+                    <div class="flip-card-back" style="background: #1e4663; color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 20px; padding: 20px;">
+                        <p style="font-size: 18px; font-weight: 600;">📄 Сертификат</p>
+                        <a href="${course.pdfUrl}" target="_blank" style="background: white; color: #1e4663; padding: 12px 24px; border-radius: 30px; text-decoration: none; font-weight: 600;">Открыть PDF →</a>
+                        <span style="font-size: 12px; opacity: 0.7;">Нажмите, чтобы скачать или просмотреть</span>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
 }
 
 // Рендер карточки проекта
@@ -399,7 +441,7 @@ function initSmoothScroll() {
     });
 }
 
-// ===== ЗАГРУЗКА КУРСОВ ИЗ STEPIK =====
+// ===== ЗАГРУЗКА ДИНАМИЧЕСКИХ КУРСОВ ИЗ STEPIK =====
 async function loadStepikCourses() {
     try {
         const response = await fetch('/Vlasov-S-N-96/data/certificates.json');
@@ -407,32 +449,25 @@ async function loadStepikCourses() {
         const data = await response.json();
         if (data.certificates.length === 0) return [];
 
-        // Получаем названия курсов для каждого сертификата
-        const certsWithTitles = await Promise.all(
-            data.certificates.map(async (cert) => {
-                try {
-                    const courseRes = await fetch(`https://stepik.org/api/courses/${cert.course_id}`);
-                    if (!courseRes.ok) throw new Error('Курс не найден');
-                    const courseData = await courseRes.json();
-                    const title = courseData.courses?.[0]?.title || `Курс #${cert.course_id}`;
-                    return { ...cert, course_title: title };
-                } catch (e) {
-                    console.warn(`Не удалось получить название для курса ${cert.course_id}:`, e);
-                    return { ...cert, course_title: `Курс #${cert.course_id}` };
-                }
-            })
-        );
+        // Собираем ID курсов, которые уже есть в статике (чтобы исключить дубли)
+        const staticStepikIds = new Set();
+        staticCoursesData.forEach(course => {
+            if (course.stepikCourseId) {
+                staticStepikIds.add(course.stepikCourseId);
+            }
+        });
+
+        // Фильтруем сертификаты, исключая те, что уже есть в статике
+        const filteredCerts = data.certificates.filter(cert => !staticStepikIds.has(cert.course_id));
 
         // Преобразуем в формат для карточек
-        return certsWithTitles.map(cert => ({
-            title: cert.course_title,
+        return filteredCerts.map(cert => ({
+            title: cert.course_title || `Курс #${cert.course_id}`,
             progress: cert.issued_at ? cert.issued_at.slice(0, 10) : 'Дата неизвестна',
-            iconImg: '',
-            desc: 'Сертификат Stepik',
-            certImage: '',
-            isStepik: true,
             pdfUrl: cert.pdf_url,
-            isExcellent: cert.is_excellent
+            isExcellent: cert.is_excellent,
+            iconUrl: cert.cover_url || '',   // <-- используем cover_url из JSON
+            customLabel: cert.custom_label || ''
         }));
 
     } catch (e) {
@@ -447,9 +482,10 @@ async function init() {
     renderSkills();
     renderExperience();
 
-    // Загружаем только курсы из Stepik
     const stepikCourses = await loadStepikCourses();
-    createSlider('coursesContainer', stepikCourses, renderCourseCard);
+    const allCourses = [...staticCoursesData, ...stepikCourses];
+
+    createSlider('coursesContainer', allCourses, renderCourseCard);
     createSlider('projectsContainer', projectsData, renderProjectCard);
     initBurger();
     initSmoothScroll();
