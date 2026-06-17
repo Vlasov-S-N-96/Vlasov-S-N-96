@@ -5,6 +5,9 @@ on:
     - cron: '0 3 * * *'   # каждый день в 3:00 UTC
   workflow_dispatch:
 
+permissions:
+  contents: write   # <-- ЭТО ГЛАВНОЕ
+
 jobs:
   update:
     runs-on: ubuntu-latest
