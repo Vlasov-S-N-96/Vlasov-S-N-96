@@ -5,17 +5,10 @@ from datetime import datetime
 
 CLIENT_ID = os.environ['STEPIK_CLIENT_ID']
 CLIENT_SECRET = os.environ['STEPIK_CLIENT_SECRET']
-USER_ID = 471959028  # Ваш ID на Stepik
+USER_ID = 471959028
 
 # ===== КАСТОМИЗАЦИЯ ДЛЯ КОНКРЕТНЫХ КУРСОВ =====
-# Здесь можно переопределить иконку и подпись для любого курса по его ID.
-# Если курс не указан, будут использованы данные из API (cover и название).
 CUSTOMIZATIONS = {
-    # Пример для Karpov.Courses (если хотите использовать свою иконку)
-    # 95367: {
-    #     'icon_url': 'image/icon_courses/carpov_courses.jpg',
-    #     'custom_label': 'Karpov.Courses'
-    # },
 }
 
 def get_access_token():
@@ -46,7 +39,7 @@ def fetch_course_info(token, course_id):
                 course = courses[0]
                 return {
                     'title': course.get('title', f'Курс #{course_id}'),
-                    'cover': course.get('cover', '')  # ссылка на обложку
+                    'cover': course.get('cover', '')
                 }
         return {'title': f'Курс #{course_id}', 'cover': ''}
     except Exception as e:
@@ -67,15 +60,13 @@ def main():
         course_info = fetch_course_info(token, course_id)
         custom = get_customization(course_id)
         
-        # Используем кастомную иконку, если есть, иначе — обложку из API
+        # Используем иконку, если есть, иначе — обложку из API
         icon_url = custom.get('icon_url', course_info['cover'])
-        # Используем кастомную подпись, если есть, иначе — стандартную
+        # Используем подпись, если есть, иначе — стандартную
         label = custom.get('custom_label', 'Сертификат Stepik')
         
-        # ===== ГЛАВНОЕ ИСПРАВЛЕНИЕ =====
         # Берём готовую ссылку на PDF из API (поле 'url')
         pdf_url = cert.get('url', '')
-        # Если вдруг поле url пустое (редко, но бывает), делаем запасной вариант
         if not pdf_url:
             pdf_url = f"https://stepik.org/certificate/{cert['id']}/pdf"
         # ================================
@@ -86,7 +77,7 @@ def main():
             'course_title': course_info['title'],
             'issued_at': cert['issue_date'],
             'is_excellent': cert.get('type') == 'distinction',
-            'pdf_url': pdf_url,           # теперь правильная ссылка
+            'pdf_url': pdf_url,          
             'cover_url': icon_url,        # ссылка на иконку
             'custom_label': label         # подпись (отображается на карточке)
         })
