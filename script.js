@@ -43,7 +43,7 @@ const staticCoursesData = [
         desc: "SQL, Linux, PostgreSQL, ClickHouse, Python, Git, Spark, Airflow, DWH, финальный проект", 
         certImage: "image/certificate_foto/karpov-certificate.jpg",
         stepikCourseId: 95367,
-        pdfUrl: "https://vlasov-s-n-96.github.io/Vlasov-S-N-96/image/certificate_foto/karpov-certificate.pdf"  // <-- ваш PDF
+        pdfUrl: "https://vlasov-s-n-96.github.io/Vlasov-S-N-96/image/certificate_foto/karpov-certificate.pdf"  // ваш PDF
     }
 ];
 
@@ -334,7 +334,7 @@ function renderCourseCard(course) {
                         </div>
                         <div style="display: flex; flex-direction: column; align-items: center; margin-bottom: 8px;">
                             <div class="course-badge" style="background: #16d6ad20; color: #107980; padding: 4px 12px; border-radius: 20px; font-size: 13px; font-weight: 600; margin-bottom: 4px; text-align: center;">${escapeHtml(course.progress)}</div>
-                            ${course.date ? `<div style="font-size: 13px; color: #107980; text-align: center;">«${escapeHtml(course.date)}»</div>` : ''}
+                            ${course.date ? `<div style="font-size: 13px; color: #107980; text-align: center;">${escapeHtml(course.date)}</div>` : ''}
                         </div>
                         <div class="course-desc" style="font-size: 14px; color: #4a627a; margin-bottom: 8px; text-align: center;">${escapeHtml(course.desc)}</div>
                         <div class="click-hint" style="font-size: 12px; color: #a0b8d0; text-align: center;">✨ Нажмите для сертификата</div>
