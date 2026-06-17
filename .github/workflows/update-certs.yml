@@ -1,0 +1,33 @@
+name: Update Stepik Certificates
+
+on:
+  schedule:
+    - cron: '0 3 * * *'   # каждый день в 3:00 UTC
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run update script
+        env:
+          STEPIK_CLIENT_ID: ${{ secrets.STEPIK_CLIENT_ID }}
+          STEPIK_CLIENT_SECRET: ${{ secrets.STEPIK_CLIENT_SECRET }}
+        run: python update_certs.py
+
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Автоматическое обновление сертификатов Stepik"
+          file_pattern: data/certificates.json
