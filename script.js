@@ -37,7 +37,8 @@ const experienceData = [
 const staticCoursesData = [
     { 
         title: "Инженер данных с нуля\n(Karpov.Courses)", 
-        progress: "✅ Успешно завершён «2025-05-05»", 
+        progress: "✅ Успешно завершён",
+        date: "2025-05-05", 
         iconImg: "image/icon_courses/carpov_courses.jpg", 
         desc: "SQL, Linux, PostgreSQL, ClickHouse, Python, Git, Spark, Airflow, DWH, финальный проект", 
         certImage: "image/certificate_foto/karpov-certificate.jpg",
@@ -314,7 +315,7 @@ function createSlider(containerId, items, cardRenderer) {
     }, 100);
 }
 
-// ===== РЕНДЕР КАРТОЧКИ КУРСА (ИКОНКА СЛЕВА, НАЗВАНИЕ СПРАВА, ВСЁ ПО ЦЕНТРУ) =====
+// ===== РЕНДЕР КАРТОЧКИ КУРСА =====
 function renderCourseCard(course) {
     const titleHtml = course.title.replace(/\n/g, '<br>');
     const star = course.isExcellent ? ' ⭐' : '';
@@ -329,9 +330,14 @@ function renderCourseCard(course) {
                             <img src="${course.iconImg}" alt="Иконка" style="width: 45px; height: 45px; object-fit: cover; border-radius: 16px; background: #f0f2f5; flex-shrink: 0;" onerror="this.style.display='none';">
                             <div class="course-title" style="font-size: 18px; font-weight: 700; color: #1e4663; text-align: center;">${titleHtml}</div>
                         </div>
-                        <div class="course-badge" style="background: #16d6ad20; color: #107980; padding: 4px 12px; border-radius: 20px; font-size: 13px; font-weight: 600; margin-bottom: 8px;">${escapeHtml(course.progress)}</div>
-                        <div class="course-desc" style="font-size: 14px; color: #4a627a; margin-bottom: 8px;">${escapeHtml(course.desc)}</div>
-                        <div class="click-hint" style="font-size: 12px; color: #a0b8d0;">✨ Нажмите для сертификата</div>
+                        <!-- ===== ДВА БЛОКА: СТАТУС И ДАТА ===== -->
+                        <div style="display: flex; flex-direction: column; align-items: center; margin-bottom: 8px;">
+                            <div class="course-badge" style="background: #16d6ad20; color: #107980; padding: 4px 12px; border-radius: 20px; font-size: 13px; font-weight: 600; margin-bottom: 4px; text-align: center;">${escapeHtml(course.progress)}</div>
+                            ${course.date ? `<div class="course-badge" style="background: #16d6ad20; color: #107980; padding: 4px 12px; border-radius: 20px; font-size: 13px; font-weight: 600; text-align: center;">«${escapeHtml(course.date)}»</div>` : ''}
+                        </div>
+                        <!-- ================================= -->
+                        <div class="course-desc" style="font-size: 14px; color: #4a627a; margin-bottom: 8px; text-align: center;">${escapeHtml(course.desc)}</div>
+                        <div class="click-hint" style="font-size: 12px; color: #a0b8d0; text-align: center;">✨ Нажмите для сертификата</div>
                     </div>
                     <div class="flip-card-back" style="background: #1e4663; color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 12px; padding: 20px;">
                         <img class="cert-image" src="${course.certImage}" alt="Сертификат" 
@@ -356,9 +362,14 @@ function renderCourseCard(course) {
                             <img src="${iconUrl}" alt="Иконка курса" style="width: 45px; height: 45px; object-fit: contain; flex-shrink: 0;" onerror="this.style.display='none';">
                             <div class="course-title" style="font-size: 18px; font-weight: 700; color: #1e4663; text-align: center;">${titleHtml}${star}</div>
                         </div>
-                        <div class="course-badge" style="background: #16d6ad20; color: #107980; padding: 4px 12px; border-radius: 20px; font-size: 13px; font-weight: 600; margin-bottom: 8px;">✅ Успешно завершён «${course.progress}»</div>
-                        <div class="course-desc" style="font-size: 14px; color: #4a627a; margin-bottom: 8px;">${escapeHtml(label)}</div>
-                        <div class="click-hint" style="font-size: 12px; color: #a0b8d0;">✨ Нажмите, чтобы открыть PDF</div>
+                        <!-- ===== ДВА БЛОКА: СТАТУС И ДАТА (В КАВЫЧКАХ) ===== -->
+                        <div style="display: flex; flex-direction: column; align-items: center; margin-bottom: 8px;">
+                            <div class="course-badge" style="background: #16d6ad20; color: #107980; padding: 4px 12px; border-radius: 20px; font-size: 13px; font-weight: 600; margin-bottom: 4px; text-align: center;">✅ Успешно завершён</div>
+                            <div class="course-badge" style="background: #16d6ad20; color: #107980; padding: 4px 12px; border-radius: 20px; font-size: 13px; font-weight: 600; text-align: center;">${escapeHtml(course.progress)}</div>
+                        </div>
+                        <!-- ===================================================== -->
+                        <div class="course-desc" style="font-size: 14px; color: #4a627a; margin-bottom: 8px; text-align: center;">${escapeHtml(label)}</div>
+                        <div class="click-hint" style="font-size: 12px; color: #a0b8d0; text-align: center;">✨ Нажмите, чтобы открыть PDF</div>
                     </div>
                     <div class="flip-card-back" style="background: #1e4663; color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 20px; padding: 20px;">
                         <img src="${iconUrl}" alt="Иконка" style="width: 60px; height: 60px; object-fit: contain; background: rgba(255,255,255,0.1); border-radius: 12px; padding: 8px;">
