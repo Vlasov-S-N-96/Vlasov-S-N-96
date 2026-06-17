@@ -33,16 +33,15 @@ const experienceData = [
     }
 ];
 
-// ===== СТАТИЧЕСКИЙ КУРС (только Karpov.Courses) =====
-// Все остальные курсы подтягиваются из Stepik автоматически
+// ===== СТАТИЧЕСКИЙ КУРС =====
 const staticCoursesData = [
     { 
         title: "Инженер данных с нуля\n(Karpov.Courses)", 
-        progress: "✅ Успешно завершён", 
+        progress: "✅ Успешно завершён «2025-05-05»", 
         iconImg: "image/icon_courses/carpov_courses.jpg", 
         desc: "SQL, Linux, PostgreSQL, ClickHouse, Python, Git, Spark, Airflow, DWH, финальный проект", 
         certImage: "image/certificate_foto/karpov-certificate.jpg",
-        stepikCourseId: 95367  // ID курса на Stepik, чтобы исключить дублирование
+        stepikCourseId: 95367
     }
 ];
 
@@ -64,7 +63,7 @@ const projectsData = [
     }
 ];
 
-// ===== ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ =====
+// Вспомогательные функции
 function escapeHtml(str) {
     if (!str) return '';
     return str.replace(/[&<>]/g, m => m === '&' ? '&amp;' : m === '<' ? '&lt;' : '&gt;');
@@ -90,7 +89,7 @@ function renderExperience() {
     });
 }
 
-// Модальное окно (для статических курсов)
+// Модальное окно
 const modal = document.getElementById('certModal');
 const modalImg = document.getElementById('modalImage');
 const closeModal = document.querySelector('.modal-close');
@@ -320,7 +319,7 @@ function renderCourseCard(course) {
     const titleHtml = course.title.replace(/\n/g, '<br>');
     const star = course.isExcellent ? ' ⭐' : '';
     
-    // Если это статический курс (есть iconImg и certImage)
+    // Статический курс (с iconImg и certImage)
     if (course.iconImg && course.certImage) {
         return `
             <div class="flip-card">
@@ -344,22 +343,25 @@ function renderCourseCard(course) {
         `;
     } else {
         // Динамический курс из Stepik
-        // Используем cover_url из JSON, если есть; иначе — иконка по умолчанию
         const iconUrl = course.iconUrl || 'https://stepik.org/static/img/logo.svg';
         const label = course.customLabel || 'Сертификат Stepik';
         
         return `
             <div class="flip-card">
                 <div class="flip-card-inner">
-                    <div class="flip-card-front" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 20px;">
+                    <div class="flip-card-front">
+                        <!-- лицевая сторона (без изменений) -->
                         <img src="${iconUrl}" alt="Иконка курса" style="width: 55px; height: 55px; object-fit: contain; margin-bottom: 10px;" onerror="this.style.display='none';">
                         <div class="course-title" style="font-size: 18px; font-weight: 700; color: #1e4663; margin-bottom: 8px;">${titleHtml}${star}</div>
-                        <div class="course-badge" style="background: #16d6ad20; color: #107980; padding: 4px 12px; border-radius: 20px; font-size: 13px; font-weight: 600; margin-bottom: 8px;">✅ Получен ${course.progress}</div>
+                        <div class="course-badge" style="background: #16d6ad20; color: #107980; padding: 4px 12px; border-radius: 20px; font-size: 13px; font-weight: 600; margin-bottom: 8px;">✅ Успешно завершён «${course.progress}»</div>
                         <div class="course-desc" style="font-size: 14px; color: #4a627a; margin-bottom: 8px;">${escapeHtml(label)}</div>
                         <div class="click-hint" style="font-size: 12px; color: #a0b8d0;">✨ Нажмите, чтобы открыть PDF</div>
                     </div>
                     <div class="flip-card-back" style="background: #1e4663; color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 20px; padding: 20px;">
-                        <p style="font-size: 18px; font-weight: 600;">📄 Сертификат</p>
+                        <!-- ===== ЗДЕСЬ ЗАМЕНА: вместо 📄 Сертификат теперь иконка ===== -->
+                        <img src="${iconUrl}" alt="Иконка" style="width: 60px; height: 60px; object-fit: contain; background: rgba(255,255,255,0.1); border-radius: 12px; padding: 8px;">
+                        <p style="font-size: 16px; font-weight: 600; margin: 0;">Сертификат</p>
+                        <!-- ========================================================== -->
                         <a href="${course.pdfUrl}" target="_blank" style="background: white; color: #1e4663; padding: 12px 24px; border-radius: 30px; text-decoration: none; font-weight: 600;">Открыть PDF →</a>
                         <span style="font-size: 12px; opacity: 0.7;">Нажмите, чтобы скачать или просмотреть</span>
                     </div>
@@ -387,7 +389,7 @@ function renderProjectCard(project) {
     `;
 }
 
-// Бургер-меню
+// Бургер-меню и плавный скролл (без изменений)
 function initBurger() {
     const burger = document.getElementById('burgerBtn');
     const mobileNav = document.getElementById('mobileNav');
@@ -425,7 +427,6 @@ function initBurger() {
     });
 }
 
-// Плавный скролл
 function initSmoothScroll() {
     document.querySelectorAll('.nav-buttons .nav-btn, .mobile-nav .nav-btn').forEach(link => {
         link.addEventListener('click', (e) => {
@@ -449,7 +450,6 @@ async function loadStepikCourses() {
         const data = await response.json();
         if (data.certificates.length === 0) return [];
 
-        // Собираем ID курсов, которые уже есть в статике (чтобы исключить дубли)
         const staticStepikIds = new Set();
         staticCoursesData.forEach(course => {
             if (course.stepikCourseId) {
@@ -457,16 +457,14 @@ async function loadStepikCourses() {
             }
         });
 
-        // Фильтруем сертификаты, исключая те, что уже есть в статике
         const filteredCerts = data.certificates.filter(cert => !staticStepikIds.has(cert.course_id));
 
-        // Преобразуем в формат для карточек
         return filteredCerts.map(cert => ({
             title: cert.course_title || `Курс #${cert.course_id}`,
             progress: cert.issued_at ? cert.issued_at.slice(0, 10) : 'Дата неизвестна',
             pdfUrl: cert.pdf_url,
             isExcellent: cert.is_excellent,
-            iconUrl: cert.cover_url || '',   // <-- используем cover_url из JSON
+            iconUrl: cert.cover_url || '',
             customLabel: cert.custom_label || ''
         }));
 
