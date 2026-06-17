@@ -42,7 +42,8 @@ const staticCoursesData = [
         iconImg: "image/icon_courses/carpov_courses.jpg", 
         desc: "SQL, Linux, PostgreSQL, ClickHouse, Python, Git, Spark, Airflow, DWH, финальный проект", 
         certImage: "image/certificate_foto/karpov-certificate.jpg",
-        stepikCourseId: 95367
+        stepikCourseId: 95367,
+        pdfUrl: "https://vlasov-s-n-96.github.io/Vlasov-S-N-96/image/certificate_foto/karpov-certificate.pdf"  // <-- ваш PDF
     }
 ];
 
@@ -322,6 +323,7 @@ function renderCourseCard(course) {
     
     // Статический курс
     if (course.iconImg && course.certImage) {
+        const hasPdf = course.pdfUrl && course.pdfUrl.trim() !== '';
         return `
             <div class="flip-card">
                 <div class="flip-card-inner">
@@ -330,21 +332,26 @@ function renderCourseCard(course) {
                             <img src="${course.iconImg}" alt="Иконка" style="width: 45px; height: 45px; object-fit: cover; border-radius: 16px; background: #f0f2f5; flex-shrink: 0;" onerror="this.style.display='none';">
                             <div class="course-title" style="font-size: 18px; font-weight: 700; color: #1e4663; text-align: center;">${titleHtml}</div>
                         </div>
-                        <!-- ===== ДВА БЛОКА: СТАТУС И ДАТА ===== -->
                         <div style="display: flex; flex-direction: column; align-items: center; margin-bottom: 8px;">
                             <div class="course-badge" style="background: #16d6ad20; color: #107980; padding: 4px 12px; border-radius: 20px; font-size: 13px; font-weight: 600; margin-bottom: 4px; text-align: center;">${escapeHtml(course.progress)}</div>
-                            ${course.date ? `<div class="course-badge" style="background: #16d6ad20; color: #107980; padding: 4px 12px; border-radius: 20px; font-size: 13px; font-weight: 600; text-align: center;">«${escapeHtml(course.date)}»</div>` : ''}
+                            ${course.date ? `<div style="font-size: 13px; color: #107980; text-align: center;">«${escapeHtml(course.date)}»</div>` : ''}
                         </div>
-                        <!-- ================================= -->
                         <div class="course-desc" style="font-size: 14px; color: #4a627a; margin-bottom: 8px; text-align: center;">${escapeHtml(course.desc)}</div>
                         <div class="click-hint" style="font-size: 12px; color: #a0b8d0; text-align: center;">✨ Нажмите для сертификата</div>
                     </div>
-                    <div class="flip-card-back" style="background: #1e4663; color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 12px; padding: 20px;">
-                        <img class="cert-image" src="${course.certImage}" alt="Сертификат" 
-                            onclick="event.stopPropagation(); openCertModal('${course.certImage}')"
-                            style="max-width: 100%; max-height: 200px; border-radius: 8px; cursor: pointer;"
-                            onerror="this.onerror=null; this.parentElement.innerHTML='<div style=\'color:white;\'>⚠️ Сертификат недоступен</div>';">
-                        <div style="font-size: 12px; opacity: 0.8;">🔍 Кликните для увеличения</div>
+                    <div class="flip-card-back" style="background: #1e4663; color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 20px; padding: 20px;">
+                        ${hasPdf ? `
+                            <img src="${course.iconImg}" alt="Иконка" style="width: 60px; height: 60px; object-fit: contain; background: rgba(255,255,255,0.1); border-radius: 12px; padding: 8px;">
+                            <p style="font-size: 16px; font-weight: 600; margin: 0;">Сертификат</p>
+                            <a href="${course.pdfUrl}" target="_blank" style="background: white; color: #1e4663; padding: 12px 24px; border-radius: 30px; text-decoration: none; font-weight: 600;">Открыть PDF →</a>
+                            <span style="font-size: 12px; opacity: 0.7;">Нажмите, чтобы скачать или просмотреть</span>
+                        ` : `
+                            <img class="cert-image" src="${course.certImage}" alt="Сертификат" 
+                                onclick="event.stopPropagation(); openCertModal('${course.certImage}')"
+                                style="max-width: 100%; max-height: 200px; border-radius: 8px; cursor: pointer;"
+                                onerror="this.onerror=null; this.parentElement.innerHTML='<div style=\'color:white;\'>⚠️ Сертификат недоступен</div>';">
+                            <div style="font-size: 12px; opacity: 0.8;">🔍 Кликните для увеличения</div>
+                        `}
                     </div>
                 </div>
             </div>
@@ -362,12 +369,10 @@ function renderCourseCard(course) {
                             <img src="${iconUrl}" alt="Иконка курса" style="width: 45px; height: 45px; object-fit: contain; flex-shrink: 0;" onerror="this.style.display='none';">
                             <div class="course-title" style="font-size: 18px; font-weight: 700; color: #1e4663; text-align: center;">${titleHtml}${star}</div>
                         </div>
-                        <!-- ===== ДВА БЛОКА: СТАТУС И ДАТА (В КАВЫЧКАХ) ===== -->
                         <div style="display: flex; flex-direction: column; align-items: center; margin-bottom: 8px;">
                             <div class="course-badge" style="background: #16d6ad20; color: #107980; padding: 4px 12px; border-radius: 20px; font-size: 13px; font-weight: 600; margin-bottom: 4px; text-align: center;">✅ Успешно завершён</div>
-                            <div class="course-badge" style="background: #16d6ad20; color: #107980; padding: 4px 12px; border-radius: 20px; font-size: 13px; font-weight: 600; text-align: center;">${escapeHtml(course.progress)}</div>
+                            <div style="font-size: 13px; color: #107980; text-align: center;">${escapeHtml(course.progress)}</div>
                         </div>
-                        <!-- ===================================================== -->
                         <div class="course-desc" style="font-size: 14px; color: #4a627a; margin-bottom: 8px; text-align: center;">${escapeHtml(label)}</div>
                         <div class="click-hint" style="font-size: 12px; color: #a0b8d0; text-align: center;">✨ Нажмите, чтобы открыть PDF</div>
                     </div>
