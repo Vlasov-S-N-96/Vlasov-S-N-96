@@ -1,0 +1,82 @@
+{
+  "updated_at": "2026-06-17T06:21:57.942601Z",
+  "certificates": [
+    {
+      "id": 1724764,
+      "course_id": 63054,
+      "issued_at": "2022-10-20T15:40:09Z",
+      "is_excellent": false,
+      "pdf_url": "https://stepik.org/certificate/1724764/pdf"
+    },
+    {
+      "id": 2975227,
+      "course_id": 95367,
+      "issued_at": "2025-10-01T08:26:13Z",
+      "is_excellent": false,
+      "pdf_url": "https://stepik.org/certificate/2975227/pdf"
+    },
+    {
+      "id": 2997365,
+      "course_id": 102883,
+      "issued_at": "2025-10-21T08:19:02Z",
+      "is_excellent": false,
+      "pdf_url": "https://stepik.org/certificate/2997365/pdf"
+    },
+    {
+      "id": 3000380,
+      "course_id": 122667,
+      "issued_at": "2025-10-23T13:05:52Z",
+      "is_excellent": false,
+      "pdf_url": "https://stepik.org/certificate/3000380/pdf"
+    },
+    {
+      "id": 3024250,
+      "course_id": 118593,
+      "issued_at": "2025-11-12T06:51:33Z",
+      "is_excellent": false,
+      "pdf_url": "https://stepik.org/certificate/3024250/pdf"
+    },
+    {
+      "id": 3054552,
+      "course_id": 204287,
+      "issued_at": "2025-12-05T06:46:27Z",
+      "is_excellent": false,
+      "pdf_url": "https://stepik.org/certificate/3054552/pdf"
+    },
+    {
+      "id": 3126703,
+      "course_id": 119119,
+      "issued_at": "2026-02-10T06:00:58Z",
+      "is_excellent": false,
+      "pdf_url": "https://stepik.org/certificate/3126703/pdf"
+    },
+    {
+      "id": 3146456,
+      "course_id": 173117,
+      "issued_at": "2026-02-24T11:12:02Z",
+      "is_excellent": false,
+      "pdf_url": "https://stepik.org/certificate/3146456/pdf"
+    },
+    {
+      "id": 3261959,
+      "course_id": 245575,
+      "issued_at": "2026-05-26T12:52:06Z",
+      "is_excellent": false,
+      "pdf_url": "https://stepik.org/certificate/3261959/pdf"
+    },
+    {
+      "id": 3262263,
+      "course_id": 248274,
+      "issued_at": "2026-05-26T17:11:19Z",
+      "is_excellent": false,
+      "pdf_url": "https://stepik.org/certificate/3262263/pdf"
+    },
+    {
+      "id": 3262264,
+      "course_id": 250124,
+      "issued_at": "2026-05-26T17:11:19Z",
+      "is_excellent": false,
+      "pdf_url": "https://stepik.org/certificate/3262264/pdf"
+    }
+  ]
+}
