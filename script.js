@@ -314,19 +314,21 @@ function createSlider(containerId, items, cardRenderer) {
     }, 100);
 }
 
-// ===== РЕНДЕР КАРТОЧКИ КУРСА =====
+// ===== РЕНДЕР КАРТОЧКИ КУРСА (ИКОНКА СЛЕВА, НАЗВАНИЕ СПРАВА, ВСЁ ПО ЦЕНТРУ) =====
 function renderCourseCard(course) {
     const titleHtml = course.title.replace(/\n/g, '<br>');
     const star = course.isExcellent ? ' ⭐' : '';
     
-    // Статический курс (с iconImg и certImage)
+    // Статический курс
     if (course.iconImg && course.certImage) {
         return `
             <div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 20px;">
-                        <img src="${course.iconImg}" alt="Иконка" style="width: 55px; height: 55px; object-fit: cover; border-radius: 16px; background: #f0f2f5; margin-bottom: 10px;" onerror="this.style.display='none';">
-                        <div class="course-title" style="font-size: 18px; font-weight: 700; color: #1e4663; margin-bottom: 8px;">${titleHtml}</div>
+                        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px; width: 100%; justify-content: center;">
+                            <img src="${course.iconImg}" alt="Иконка" style="width: 45px; height: 45px; object-fit: cover; border-radius: 16px; background: #f0f2f5; flex-shrink: 0;" onerror="this.style.display='none';">
+                            <div class="course-title" style="font-size: 18px; font-weight: 700; color: #1e4663; text-align: center;">${titleHtml}</div>
+                        </div>
                         <div class="course-badge" style="background: #16d6ad20; color: #107980; padding: 4px 12px; border-radius: 20px; font-size: 13px; font-weight: 600; margin-bottom: 8px;">${escapeHtml(course.progress)}</div>
                         <div class="course-desc" style="font-size: 14px; color: #4a627a; margin-bottom: 8px;">${escapeHtml(course.desc)}</div>
                         <div class="click-hint" style="font-size: 12px; color: #a0b8d0;">✨ Нажмите для сертификата</div>
@@ -349,19 +351,18 @@ function renderCourseCard(course) {
         return `
             <div class="flip-card">
                 <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <!-- лицевая сторона (без изменений) -->
-                        <img src="${iconUrl}" alt="Иконка курса" style="width: 55px; height: 55px; object-fit: contain; margin-bottom: 10px;" onerror="this.style.display='none';">
-                        <div class="course-title" style="font-size: 18px; font-weight: 700; color: #1e4663; margin-bottom: 8px;">${titleHtml}${star}</div>
+                    <div class="flip-card-front" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 20px;">
+                        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px; width: 100%; justify-content: center;">
+                            <img src="${iconUrl}" alt="Иконка курса" style="width: 45px; height: 45px; object-fit: contain; flex-shrink: 0;" onerror="this.style.display='none';">
+                            <div class="course-title" style="font-size: 18px; font-weight: 700; color: #1e4663; text-align: center;">${titleHtml}${star}</div>
+                        </div>
                         <div class="course-badge" style="background: #16d6ad20; color: #107980; padding: 4px 12px; border-radius: 20px; font-size: 13px; font-weight: 600; margin-bottom: 8px;">✅ Успешно завершён «${course.progress}»</div>
                         <div class="course-desc" style="font-size: 14px; color: #4a627a; margin-bottom: 8px;">${escapeHtml(label)}</div>
                         <div class="click-hint" style="font-size: 12px; color: #a0b8d0;">✨ Нажмите, чтобы открыть PDF</div>
                     </div>
                     <div class="flip-card-back" style="background: #1e4663; color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 20px; padding: 20px;">
-                        <!-- ===== ЗДЕСЬ ЗАМЕНА: вместо 📄 Сертификат теперь иконка ===== -->
                         <img src="${iconUrl}" alt="Иконка" style="width: 60px; height: 60px; object-fit: contain; background: rgba(255,255,255,0.1); border-radius: 12px; padding: 8px;">
                         <p style="font-size: 16px; font-weight: 600; margin: 0;">Сертификат</p>
-                        <!-- ========================================================== -->
                         <a href="${course.pdfUrl}" target="_blank" style="background: white; color: #1e4663; padding: 12px 24px; border-radius: 30px; text-decoration: none; font-weight: 600;">Открыть PDF →</a>
                         <span style="font-size: 12px; opacity: 0.7;">Нажмите, чтобы скачать или просмотреть</span>
                     </div>
@@ -389,7 +390,7 @@ function renderProjectCard(project) {
     `;
 }
 
-// Бургер-меню и плавный скролл (без изменений)
+// Бургер-меню и плавный скролл
 function initBurger() {
     const burger = document.getElementById('burgerBtn');
     const mobileNav = document.getElementById('mobileNav');
