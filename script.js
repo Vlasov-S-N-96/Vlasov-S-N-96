@@ -418,6 +418,51 @@ function initSmoothScroll() {
     });
 }
 
+// ===== НОВАЯ ФУНКЦИЯ ДЛЯ ЗАГРУЗКИ СЕРТИФИКАТОВ С STEPIK =====
+async function loadStepikCerts() {
+    try {
+        const response = await fetch('/Vlasov-S-N-96/data/certificates.json');
+        if (!response.ok) throw new Error('Сертификаты не найдены');
+        const data = await response.json();
+        const container = document.getElementById('stepikCerts');
+        if (!container) return;
+
+        if (data.certificates.length === 0) {
+            container.innerHTML = '<p>Сертификаты пока не загружены</p>';
+            return;
+        }
+
+        let html = '<div style="display:flex; flex-wrap:wrap; gap:12px; margin-top:12px;">';
+        data.certificates.forEach(cert => {
+            html += `
+                <a href="${cert.pdf_url}" target="_blank" style="
+                    background: #1e4663;
+                    color: white;
+                    padding: 8px 18px;
+                    border-radius: 30px;
+                    text-decoration: none;
+                    font-size: 14px;
+                    font-weight: 500;
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 6px;
+                    transition: 0.2s;
+                " onmouseover="this.style.background='#0d2b40'" onmouseout="this.style.background='#1e4663'">
+                    Сертификат #${cert.id}
+                    ${cert.is_excellent ? '⭐' : ''}
+                    <span style="font-size:12px; opacity:0.7;">${cert.issued_at}</span>
+                </a>
+            `;
+        });
+        html += '</div>';
+        container.innerHTML = html;
+    } catch (e) {
+        console.warn('Ошибка загрузки сертификатов:', e);
+        const container = document.getElementById('stepikCerts');
+        if (container) container.innerHTML = '<p style="color: #999;">Не удалось загрузить сертификаты</p>';
+    }
+}
+
 // СТАРТ
 function init() {
     console.log('Initializing...');
@@ -427,6 +472,7 @@ function init() {
     createSlider('projectsContainer', projectsData, renderProjectCard);
     initBurger();
     initSmoothScroll();
+    loadStepikCerts();   // <-- ВЫЗОВ НОВОЙ ФУНКЦИИ
 }
 
 if (document.readyState === 'loading') {
