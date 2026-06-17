@@ -11,10 +11,10 @@ USER_ID = 471959028  # Ваш ID на Stepik
 # Здесь можно переопределить иконку и подпись для любого курса по его ID.
 # Если курс не указан, будут использованы данные из API (cover и название).
 CUSTOMIZATIONS = {
-    # Например, для Karpov.Courses можно задать свою иконку (если не хотите использовать обложку из API)
+    # Пример для Karpov.Courses (если хотите использовать свою иконку)
     # 95367: {
-    #     'icon_url': 'image/icon_courses/carpov_courses.jpg',  # своя иконка
-    #     'custom_label': 'Karpov.Courses'                     # своя подпись
+    #     'icon_url': 'image/icon_courses/carpov_courses.jpg',
+    #     'custom_label': 'Karpov.Courses'
     # },
 }
 
@@ -64,9 +64,7 @@ def main():
     certs_data = []
     for cert in certs:
         course_id = cert['course']
-        # Получаем название и обложку из API
         course_info = fetch_course_info(token, course_id)
-        # Проверяем, есть ли кастомизация
         custom = get_customization(course_id)
         
         # Используем кастомную иконку, если есть, иначе — обложку из API
@@ -74,15 +72,23 @@ def main():
         # Используем кастомную подпись, если есть, иначе — стандартную
         label = custom.get('custom_label', 'Сертификат Stepik')
         
+        # ===== ГЛАВНОЕ ИСПРАВЛЕНИЕ =====
+        # Берём готовую ссылку на PDF из API (поле 'url')
+        pdf_url = cert.get('url', '')
+        # Если вдруг поле url пустое (редко, но бывает), делаем запасной вариант
+        if not pdf_url:
+            pdf_url = f"https://stepik.org/certificate/{cert['id']}/pdf"
+        # ================================
+        
         certs_data.append({
             'id': cert['id'],
             'course_id': course_id,
             'course_title': course_info['title'],
             'issued_at': cert['issue_date'],
             'is_excellent': cert.get('type') == 'distinction',
-            'pdf_url': cert.get('url', ''),
-            'cover_url': icon_url,      # ссылка на иконку
-            'custom_label': label       # подпись (отображается на карточке)
+            'pdf_url': pdf_url,           # теперь правильная ссылка
+            'cover_url': icon_url,        # ссылка на иконку
+            'custom_label': label         # подпись (отображается на карточке)
         })
     
     output = {
@@ -94,7 +100,7 @@ def main():
     with open('data/certificates.json', 'w', encoding='utf-8') as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
     
-    print(f"✅ Обновлено {len(certs_data)} сертификатов с иконками")
+    print(f"✅ Обновлено {len(certs_data)} сертификатов с правильными ссылками на PDF")
 
 if __name__ == '__main__':
     main()
