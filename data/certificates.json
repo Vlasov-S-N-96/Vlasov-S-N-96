@@ -1,82 +1,115 @@
 {
-  "updated_at": "2026-06-17T06:21:57.942601Z",
+  "updated_at": "2026-06-17T07:44:53.862659Z",
   "certificates": [
     {
       "id": 1724764,
       "course_id": 63054,
+      "course_title": "Интерактивный тренажер по SQL",
       "issued_at": "2022-10-20T15:40:09Z",
-      "is_excellent": false,
-      "pdf_url": "https://stepik.org/certificate/1724764/pdf"
+      "is_excellent": true,
+      "pdf_url": "https://stepik.org/certificate/e3317bd2623b38969a238edfcb73cc61da09abee.pdf",
+      "cover_url": "https://cdn.stepik.net/media/cache/images/courses/63054/cover_foIuz1t/6bc976a3abd69e9e3e5163a5973a8ccf.jpg",
+      "custom_label": "Сертификат Stepik"
     },
     {
       "id": 2975227,
       "course_id": 95367,
+      "course_title": "Оконные функции SQL",
       "issued_at": "2025-10-01T08:26:13Z",
-      "is_excellent": false,
-      "pdf_url": "https://stepik.org/certificate/2975227/pdf"
+      "is_excellent": true,
+      "pdf_url": "https://stepik.org/certificate/749623ae2a16df80f4a894eac6f39670ee012266.pdf",
+      "cover_url": "https://cdn.stepik.net/media/cache/images/courses/95367/cover_JqKIgvV/161522d37d60a09d20fe38259d1577b6.png",
+      "custom_label": "Сертификат Stepik"
     },
     {
       "id": 2997365,
       "course_id": 102883,
+      "course_title": "SQL для всех",
       "issued_at": "2025-10-21T08:19:02Z",
-      "is_excellent": false,
-      "pdf_url": "https://stepik.org/certificate/2997365/pdf"
+      "is_excellent": true,
+      "pdf_url": "https://stepik.org/certificate/475d733477a8814e12f98184ca8c2dbf9aa7bb85.pdf",
+      "cover_url": "https://cdn.stepik.net/media/cache/images/courses/102883/cover_UYFoJiS/1802c6936d5f000c5d4f9957b548f1ce.PNG",
+      "custom_label": "Сертификат Stepik"
     },
     {
       "id": 3000380,
       "course_id": 122667,
+      "course_title": "SQL для всех. Level Up",
       "issued_at": "2025-10-23T13:05:52Z",
-      "is_excellent": false,
-      "pdf_url": "https://stepik.org/certificate/3000380/pdf"
+      "is_excellent": true,
+      "pdf_url": "https://stepik.org/certificate/4c653d54dc729ea0d48c93f51f18e054fada974f.pdf",
+      "cover_url": "https://cdn.stepik.net/media/cache/images/courses/122667/cover_v1EkbkQ/e66e62ebedb5646d33ca78457b68351e.png",
+      "custom_label": "Сертификат Stepik"
     },
     {
       "id": 3024250,
       "course_id": 118593,
+      "course_title": "Python: анализ данных с Pandas",
       "issued_at": "2025-11-12T06:51:33Z",
-      "is_excellent": false,
-      "pdf_url": "https://stepik.org/certificate/3024250/pdf"
+      "is_excellent": true,
+      "pdf_url": "https://stepik.org/certificate/268f623f3b556f2270500899058e60e0695ff048.pdf",
+      "cover_url": "https://cdn.stepik.net/media/cache/images/courses/118593/cover_6uOCE7Z/ac46f7f92593a0e9c8710023336646a4.PNG",
+      "custom_label": "Сертификат Stepik"
     },
     {
       "id": 3054552,
       "course_id": 204287,
+      "course_title": "Введение в статистику и проверку гипотез",
       "issued_at": "2025-12-05T06:46:27Z",
-      "is_excellent": false,
-      "pdf_url": "https://stepik.org/certificate/3054552/pdf"
+      "is_excellent": true,
+      "pdf_url": "https://stepik.org/certificate/e53af63549a44ba519de3bcd67dd4b7951ae654e.pdf",
+      "cover_url": "https://cdn.stepik.net/media/cache/images/courses/204287/cover_NscEu0T/3850151a5092f867f7244f9f3b3710cf.png",
+      "custom_label": "Сертификат Stepik"
     },
     {
       "id": 3126703,
       "course_id": 119119,
+      "course_title": "Excel: от новичка до уверенного бизнес-пользователя",
       "issued_at": "2026-02-10T06:00:58Z",
-      "is_excellent": false,
-      "pdf_url": "https://stepik.org/certificate/3126703/pdf"
+      "is_excellent": true,
+      "pdf_url": "https://stepik.org/certificate/9017b9adfec28d071fad186ef76d8e5ec32a17bf.pdf",
+      "cover_url": "https://cdn.stepik.net/media/cache/images/courses/119119/cover_ofdO847/5cab6157e7af9749d128b24a7821d062.jpg",
+      "custom_label": "Сертификат Stepik"
     },
     {
       "id": 3146456,
       "course_id": 173117,
+      "course_title": "Excel: основное для работы с массивами и базами данных",
       "issued_at": "2026-02-24T11:12:02Z",
-      "is_excellent": false,
-      "pdf_url": "https://stepik.org/certificate/3146456/pdf"
+      "is_excellent": true,
+      "pdf_url": "https://stepik.org/certificate/674fae6144a6e818d43956b239a92e8e1cb6167b.pdf",
+      "cover_url": "https://cdn.stepik.net/media/cache/images/courses/173117/cover_EWCSbZ1/31fe63e24296b8e251771dbeeff3417d.jpg",
+      "custom_label": "Сертификат Stepik"
     },
     {
       "id": 3261959,
       "course_id": 245575,
+      "course_title": "Тестирование ПО с нуля. Теория + практика. Продвинутый курс с ИИ",
       "issued_at": "2026-05-26T12:52:06Z",
-      "is_excellent": false,
-      "pdf_url": "https://stepik.org/certificate/3261959/pdf"
+      "is_excellent": true,
+      "pdf_url": "https://stepik.org/certificate/f023fa76a19d5f420130bf0b8eca6c50ed9b80ca.pdf",
+      "cover_url": "https://cdn.stepik.net/media/cache/images/courses/245575/cover_z0PB5ve/5ef5a743b86c33a54249756145001ccd.png",
+      "custom_label": "Сертификат Stepik"
     },
     {
       "id": 3262263,
       "course_id": 248274,
+      "course_title": "Тестирование ПО. Практические тренажеры для тестировщика с ИИ",
       "issued_at": "2026-05-26T17:11:19Z",
-      "is_excellent": false,
-      "pdf_url": "https://stepik.org/certificate/3262263/pdf"
+      "is_excellent": true,
+      "pdf_url": "https://stepik.org/certificate/8ae9d7a94f6e87c89f311074a8fad288643f7942.pdf",
+      "cover_url": "https://cdn.stepik.net/media/cache/images/courses/248274/cover_UOW1GiI/5f67b3f2939764e66872ff786410d7b6.png",
+      "custom_label": "Сертификат Stepik"
     },
     {
       "id": 3262264,
       "course_id": 250124,
+      "course_title": "Тестирование ПО. Симулятор собеседования тестировщика с ИИ",
       "issued_at": "2026-05-26T17:11:19Z",
       "is_excellent": false,
-      "pdf_url": "https://stepik.org/certificate/3262264/pdf"
+      "pdf_url": "https://stepik.org/certificate/8c255ab4ccbc40d939648fe61b1d8ce0c986a04f.pdf",
+      "cover_url": "https://cdn.stepik.net/media/cache/images/courses/250124/cover_nTHaiRX/40aac853d006fb5e7f005e29c19176ac.png",
+      "custom_label": "Сертификат Stepik"
     }
   ]
 }
