@@ -33,23 +33,7 @@ const experienceData = [
     }
 ];
 
-// СТАТИЧЕСКИЕ КУРСЫ (без сертификатов из Stepik)
-const staticCoursesData = [
-    { title: "Тестирование ПО с нуля.\nПродвинутый курс\nс ИИ", progress: "78% пройдено", iconImg: "image/icon_courses/Testing_advanced_courses_ii+prectica.png", desc: "Типы тестирования, тест-дизайн, тестовая документация, работа с Jira, Postman, SQL, Git, CI/CD", certImage: "image/certificate_foto/testing_advanced.jpg" },
-    { title: "Тестирование ПО.\nСимулятор собеседования\nс ИИ", progress: "✅ Успешно завершён", iconImg: "image/icon_courses/Testing_advanced_courses_ii.png", desc: "Подготовка к интервью: теория, тест-дизайн, API, SQL, ситуационные кейсы", certImage: "image/certificate_foto/testing_interview.jpg" },
-    { title: "Тестирование ПО.\nПрактические\nтренажеры с ИИ", progress: "✅ Успешно завершён", iconImg: "image/icon_courses/AI_testing_simullytions.png", desc: "Классы эквивалентности, граничные значения, pairwise, таблицы решений, DevTools", certImage: "image/certificate_foto/testing_trainers.jpg" },
-    { title: "Инженер данных с нуля\n(Karpov.Courses)", progress: "✅ Успешно завершён", iconImg: "image/icon_courses/carpov_courses.jpg", desc: "SQL, Linux, PostgreSQL, ClickHouse, Python, Git, Spark, Airflow, DWH, финальный проект", certImage: "image/certificate_foto/karpov-certificate.jpg" },
-    { title: "Python: анализ данных\nс Pandas", progress: "✅ Успешно завершён", iconImg: "image/icon_courses/pandas_python.png", desc: "Чтение данных, фильтрация, группировка, merge, работа с датами, визуализация", certImage: "image/certificate_foto/Stepik-Pandas.jpg" },
-    { title: "SQL для всех", progress: "✅ Успешно завершён", iconImg: "image/icon_courses/sql_level.png", desc: "SELECT, JOIN, GROUP BY, агрегатные функции, подзапросы, создание отчётов", certImage: "image/certificate_foto/Stepik-sertificate-SQL.jpg" },
-    { title: "SQL для всех.\nLevel Up", progress: "✅ Успешно завершён", iconImg: "image/icon_courses/SQL_level_up.png", desc: "Продвинутые запросы, вложенные подзапросы, сложные JOIN, оптимизация", certImage: "image/certificate_foto/Stepik_sql_level_up.jpg" },
-    { title: "Оконные функции SQL", progress: "✅ Успешно завершён", iconImg: "image/icon_courses/windows_funkcion.png", desc: "ROW_NUMBER, RANK, LEAD, LAG, агрегация с окнами, фреймы ROWS/RANGE", certImage: "image/certificate_foto/stepik-certificate_for_sql_window_functions.jpg" },
-    { title: "Интерактивный тренажер\nпо SQL", progress: "✅ Успешно завершён", iconImg: "image/icon_courses/Interactive_sql.jpg", desc: "100+ практических задач, от простых запросов до сложных аналитических", certImage: "image/certificate_foto/stepik-certificate.jpg" },
-    { title: "Excel: основное для работы\nс массивами и базами данных", progress: "✅ Успешно завершён", iconImg: "image/icon_courses/Exel_massive_bd.jpg", desc: "ВПР, ИНДЕКС-ПОИСКПОЗ, СМЕЩ, БД-функции, умные таблицы, Power Pivot", certImage: "image/certificate_foto/Exel_massive_bd.png" },
-    { title: "Excel: от новичка до\nуверенного бизнес-пользователя", progress: "✅ Успешно завершён", iconImg: "image/icon_courses/Excel_user.jpg", desc: "Сводные таблицы, диаграммы, условное форматирование, защита данных", certImage: "image/certificate_foto/Exel_user.png" },
-    { title: "Введение в статистику\nи проверку гипотез", progress: "✅ Успешно завершён", iconImg: "image/icon_courses/statistic.png", desc: "Распределения, Z-test, T-test, A/B тестирование, мощность теста, sample size", certImage: "image/certificate_foto/Stepik-sertificate_statistik.jpg" }
-];
-
-// ПРОЕКТЫ
+// ПРОЕКТЫ (остаются без изменений)
 const projectsData = [
     { 
         title: "Тестовые артефакты (чек-листы, тест-кейсы)", 
@@ -93,7 +77,7 @@ function renderExperience() {
     });
 }
 
-// Модальное окно
+// Модальное окно (для совместимости, но не используется для Stepik)
 const modal = document.getElementById('certModal');
 const modalImg = document.getElementById('modalImage');
 const closeModal = document.querySelector('.modal-close');
@@ -150,11 +134,9 @@ function createSlider(containerId, items, cardRenderer) {
         slide.innerHTML = cardRenderer(item);
         
         if (containerId === 'coursesContainer') {
-            // Для статических курсов – переворот, для динамических (Stepik) – тоже, но с ссылкой на PDF
             const flipCard = slide.querySelector('.flip-card');
             if (flipCard) {
                 flipCard.addEventListener('click', function(e) {
-                    // Если кликнули по картинке сертификата – не переворачиваем
                     if (e.target.classList && e.target.classList.contains('cert-image')) return;
                     this.classList.toggle('flipped');
                 });
@@ -320,60 +302,32 @@ function createSlider(containerId, items, cardRenderer) {
     }, 100);
 }
 
-// Рендер карточки курса (универсальная)
+// Рендер карточки курса (только для сертификатов Stepik)
 function renderCourseCard(course) {
     const titleHtml = course.title.replace(/\n/g, '<br>');
-    // Если это курс из Stepik – показываем ссылку на PDF, иначе статичную картинку
-    if (course.isStepik) {
-        // Карточка с переворотом: на лицевой стороне название и дата, на обратной – ссылка на PDF
-        return `
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <div class="course-header">
-                            <div class="course-icon-img" style="background: #1e4663; border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 28px; color: white;">📜</div>
-                            <div class="course-title">${titleHtml}</div>
-                        </div>
-                        <div class="course-badge">✅ Получен ${course.progress}</div>
-                        <div class="course-desc">Сертификат Stepik</div>
-                        <div class="click-hint">✨ Нажмите, чтобы открыть PDF</div>
+    return `
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <div class="course-header">
+                        <div class="course-icon-img" style="background: #1e4663; border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 28px; color: white;">📜</div>
+                        <div class="course-title">${titleHtml}</div>
                     </div>
-                    <div class="flip-card-back" style="background: #1e4663; color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px;">
-                        <p style="font-size: 16px; font-weight: 600;">📄 Сертификат</p>
-                        <a href="${course.pdfUrl}" target="_blank" style="background: white; color: #1e4663; padding: 12px 24px; border-radius: 30px; text-decoration: none; font-weight: 600;">Открыть PDF →</a>
-                        <span style="font-size: 12px; opacity: 0.7;">Нажмите, чтобы скачать или просмотреть</span>
-                    </div>
+                    <div class="course-badge">✅ Получен ${course.progress}</div>
+                    <div class="course-desc">Сертификат Stepik</div>
+                    <div class="click-hint">✨ Нажмите, чтобы открыть PDF</div>
+                </div>
+                <div class="flip-card-back" style="background: #1e4663; color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px;">
+                    <p style="font-size: 16px; font-weight: 600;">📄 Сертификат</p>
+                    <a href="${course.pdfUrl}" target="_blank" style="background: white; color: #1e4663; padding: 12px 24px; border-radius: 30px; text-decoration: none; font-weight: 600;">Открыть PDF →</a>
+                    <span style="font-size: 12px; opacity: 0.7;">Нажмите, чтобы скачать или просмотреть</span>
                 </div>
             </div>
-        `;
-    } else {
-        // Статическая карточка с картинкой сертификата
-        return `
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <div class="course-header">
-                            <img class="course-icon-img" src="${course.iconImg}" alt="Иконка" 
-                                onerror="this.onerror=null; this.style.display='none';">
-                            <div class="course-title">${titleHtml}</div>
-                        </div>
-                        <div class="course-badge">${escapeHtml(course.progress)}</div>
-                        <div class="course-desc">${escapeHtml(course.desc)}</div>
-                        <div class="click-hint">✨ Нажмите для сертификата</div>
-                    </div>
-                    <div class="flip-card-back">
-                        <img class="cert-image" src="${course.certImage}" alt="Сертификат" 
-                            onclick="event.stopPropagation(); openCertModal('${course.certImage}')"
-                            onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'cert-image-error\'>⚠️ Сертификат недоступен</div>';">
-                        <div class="cert-hint">🔍 Кликните для увеличения</div>
-                    </div>
-                </div>
-            </div>
-        `;
-    }
+        </div>
+    `;
 }
 
-// Рендер карточки проекта (без изменений)
+// Рендер карточки проекта
 function renderProjectCard(project) {
     return `
         <div class="project-card">
@@ -391,7 +345,7 @@ function renderProjectCard(project) {
     `;
 }
 
-// Бургер-меню (без изменений)
+// Бургер-меню
 function initBurger() {
     const burger = document.getElementById('burgerBtn');
     const mobileNav = document.getElementById('mobileNav');
@@ -429,7 +383,7 @@ function initBurger() {
     });
 }
 
-// Плавный скролл (без изменений)
+// Плавный скролл
 function initSmoothScroll() {
     document.querySelectorAll('.nav-buttons .nav-btn, .mobile-nav .nav-btn').forEach(link => {
         link.addEventListener('click', (e) => {
@@ -445,7 +399,7 @@ function initSmoothScroll() {
     });
 }
 
-// ===== ЗАГРУЗКА ДИНАМИЧЕСКИХ КУРСОВ ИЗ STEPIK =====
+// ===== ЗАГРУЗКА КУРСОВ ИЗ STEPIK =====
 async function loadStepikCourses() {
     try {
         const response = await fetch('/Vlasov-S-N-96/data/certificates.json');
@@ -469,16 +423,16 @@ async function loadStepikCourses() {
             })
         );
 
-        // Преобразуем в формат, понятный renderCourseCard
+        // Преобразуем в формат для карточек
         return certsWithTitles.map(cert => ({
             title: cert.course_title,
             progress: cert.issued_at ? cert.issued_at.slice(0, 10) : 'Дата неизвестна',
-            iconImg: '', // не используется, но оставим
+            iconImg: '',
             desc: 'Сертификат Stepik',
-            certImage: '', // не используется для динамических
+            certImage: '',
             isStepik: true,
             pdfUrl: cert.pdf_url,
-            isExcellent: cert.is_excellent // можно использовать для звёздочки
+            isExcellent: cert.is_excellent
         }));
 
     } catch (e) {
@@ -487,18 +441,15 @@ async function loadStepikCourses() {
     }
 }
 
-// ===== ИНИЦИАЛИЗАЦИЯ (АСИНХРОННАЯ) =====
+// ===== ИНИЦИАЛИЗАЦИЯ =====
 async function init() {
     console.log('Initializing...');
     renderSkills();
     renderExperience();
 
-    // Загружаем динамические курсы из Stepik
+    // Загружаем только курсы из Stepik
     const stepikCourses = await loadStepikCourses();
-    // Объединяем статические и динамические курсы
-    const allCourses = [...staticCoursesData, ...stepikCourses];
-
-    createSlider('coursesContainer', allCourses, renderCourseCard);
+    createSlider('coursesContainer', stepikCourses, renderCourseCard);
     createSlider('projectsContainer', projectsData, renderProjectCard);
     initBurger();
     initSmoothScroll();
