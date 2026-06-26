@@ -180,7 +180,7 @@ body {
 }
 
 .resume-link:hover {
-    background: #e74c3c;
+    background: #1e4663;
     transform: scale(1.05);
     box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
 }
