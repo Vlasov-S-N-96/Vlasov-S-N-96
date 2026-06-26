@@ -167,6 +167,24 @@ body {
     box-shadow: 0 6px 14px rgba(30, 70, 99, 0.3);
 }
 
+/* Кнопка-ссылка на резюме */
+.resume-link {
+    display: inline-block;
+    background: #09a0ab;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.resume-link:hover {
+    background: #e74c3c;
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
+}
+
 /* МОБИЛЬНОЕ МЕНЮ */
 .menu-overlay {
     position: fixed;
