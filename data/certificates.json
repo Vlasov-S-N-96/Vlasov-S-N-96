@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-30T09:06:56.898649Z",
+  "updated_at": "2026-10-01T09:34:14.416848Z",
   "certificates": [
     {
       "id": 1724764,
@@ -14,11 +14,11 @@
     {
       "id": 2975227,
       "course_id": 95367,
-      "course_title": "Оконные функции SQL",
+      "course_title": "Курс #95367",
       "issued_at": "2025-10-01T08:26:13Z",
       "is_excellent": true,
       "pdf_url": "https://stepik.org/certificate/749623ae2a16df80f4a894eac6f39670ee012266.pdf",
-      "cover_url": "https://cdn.stepik.net/media/cache/images/courses/95367/cover_JqKIgvV/161522d37d60a09d20fe38259d1577b6.png",
+      "cover_url": "",
       "custom_label": "Сертификат Stepik"
     },
     {
