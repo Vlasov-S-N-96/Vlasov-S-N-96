@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-09T09:50:36.452493Z",
+  "updated_at": "2026-10-10T09:12:30.572604Z",
   "certificates": [
     {
       "id": 1724764,
@@ -24,11 +24,11 @@
     {
       "id": 2997365,
       "course_id": 102883,
-      "course_title": "Курс #102883",
+      "course_title": "SQL для всех",
       "issued_at": "2025-10-21T08:19:02Z",
       "is_excellent": true,
       "pdf_url": "https://stepik.org/certificate/475d733477a8814e12f98184ca8c2dbf9aa7bb85.pdf",
-      "cover_url": "",
+      "cover_url": "https://cdn.stepik.net/media/cache/images/courses/102883/cover_UYFoJiS/1802c6936d5f000c5d4f9957b548f1ce.PNG",
       "custom_label": "Сертификат Stepik"
     },
     {
