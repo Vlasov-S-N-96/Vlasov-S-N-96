@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-26T08:19:36.318749Z",
+  "updated_at": "2026-10-27T08:28:25.202799Z",
   "certificates": [
     {
       "id": 1724764,
@@ -104,11 +104,11 @@
     {
       "id": 3262264,
       "course_id": 250124,
-      "course_title": "Курс #250124",
+      "course_title": "Тестирование ПО. Симулятор собеседования тестировщика с ИИ",
       "issued_at": "2026-05-26T17:11:19Z",
       "is_excellent": true,
       "pdf_url": "https://stepik.org/certificate/8c255ab4ccbc40d939648fe61b1d8ce0c986a04f.pdf",
-      "cover_url": "",
+      "cover_url": "https://cdn.stepik.net/media/cache/images/courses/250124/cover_nTHaiRX/40aac853d006fb5e7f005e29c19176ac.png",
       "custom_label": "Сертификат Stepik"
     },
     {
