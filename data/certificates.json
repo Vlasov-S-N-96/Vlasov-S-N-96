@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-14T09:36:33.375900Z",
+  "updated_at": "2026-11-15T10:06:33.386358Z",
   "certificates": [
     {
       "id": 1724764,
@@ -84,7 +84,7 @@
     {
       "id": 3261959,
       "course_id": 245575,
-      "course_title": "Тестирование ПО с нуля. Теория + практика. Продвинутый курс с ИИ",
+      "course_title": "Тестирование ПО с нуля. Продвинутый курс тестировщика с ИИ",
       "issued_at": "2026-05-26T12:52:06Z",
       "is_excellent": true,
       "pdf_url": "https://stepik.org/certificate/f023fa76a19d5f420130bf0b8eca6c50ed9b80ca.pdf",
@@ -94,7 +94,7 @@
     {
       "id": 3262263,
       "course_id": 248274,
-      "course_title": "Тестирование ПО. Практические тренажеры для тестировщика с ИИ",
+      "course_title": "Тестирование ПО. Тренажеры для тестировщика с ИИ",
       "issued_at": "2026-05-26T17:11:19Z",
       "is_excellent": true,
       "pdf_url": "https://stepik.org/certificate/8ae9d7a94f6e87c89f311074a8fad288643f7942.pdf",
@@ -104,7 +104,7 @@
     {
       "id": 3262264,
       "course_id": 250124,
-      "course_title": "Тестирование ПО. Симулятор собеседования тестировщика с ИИ",
+      "course_title": "Тестирование ПО. Симулятор собеседования тестировщика/QA с ИИ",
       "issued_at": "2026-05-26T17:11:19Z",
       "is_excellent": true,
       "pdf_url": "https://stepik.org/certificate/8c255ab4ccbc40d939648fe61b1d8ce0c986a04f.pdf",
@@ -114,7 +114,7 @@
     {
       "id": 3298168,
       "course_id": 188242,
-      "course_title": "Тестирование ПО с нуля. Тесты",
+      "course_title": "Тестирование ПО с нуля. Тесты и вопросы для тестировщика",
       "issued_at": "2026-07-07T05:01:18Z",
       "is_excellent": true,
       "pdf_url": "https://stepik.org/certificate/5d70c390f319ce2102ed933f345826b5b9cb7297.pdf",
