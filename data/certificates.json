@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-23T11:28:24.989263Z",
+  "updated_at": "2026-11-24T13:02:03.257018Z",
   "certificates": [
     {
       "id": 1724764,
@@ -88,7 +88,7 @@
       "issued_at": "2026-05-26T12:52:06Z",
       "is_excellent": true,
       "pdf_url": "https://stepik.org/certificate/f023fa76a19d5f420130bf0b8eca6c50ed9b80ca.pdf",
-      "cover_url": "https://cdn.stepik.net/media/cache/images/courses/245575/cover_z0PB5ve/5ef5a743b86c33a54249756145001ccd.png",
+      "cover_url": "https://cdn.stepik.net/media/cache/images/courses/245575/cover_FqrStzB/e7e9b0dce986365f6b7e222a7c939522.png",
       "custom_label": "Сертификат Stepik"
     },
     {
@@ -98,7 +98,7 @@
       "issued_at": "2026-05-26T17:11:19Z",
       "is_excellent": true,
       "pdf_url": "https://stepik.org/certificate/8ae9d7a94f6e87c89f311074a8fad288643f7942.pdf",
-      "cover_url": "https://cdn.stepik.net/media/cache/images/courses/248274/cover_UOW1GiI/5f67b3f2939764e66872ff786410d7b6.png",
+      "cover_url": "https://cdn.stepik.net/media/cache/images/courses/248274/cover_zJ2CH22/bd31aa8009e8d8dc9ed4d3f64837e90a.png",
       "custom_label": "Сертификат Stepik"
     },
     {
@@ -108,7 +108,7 @@
       "issued_at": "2026-05-26T17:11:19Z",
       "is_excellent": true,
       "pdf_url": "https://stepik.org/certificate/8c255ab4ccbc40d939648fe61b1d8ce0c986a04f.pdf",
-      "cover_url": "https://cdn.stepik.net/media/cache/images/courses/250124/cover_nTHaiRX/40aac853d006fb5e7f005e29c19176ac.png",
+      "cover_url": "https://cdn.stepik.net/media/cache/images/courses/250124/cover_TNNhsEJ/354bcbfe27c95406ba076c727e946ee4.png",
       "custom_label": "Сертификат Stepik"
     },
     {
